@@ -17,7 +17,7 @@
 * [Guides](getting-started/guides.md)
   * [Cross-chain Bridge](getting-started/guides/bridge.md)
   * [Create a Token](getting-started/guides/create-token.md)
-  * [List on Exchange](getting-started/guides/listing.md)
+  * [Published to trading market](getting-started/guides/listing.md)
     * [Create Swap Pair](getting-started/guides/create-swap-pair.md)
   * [Get GT](getting-started/guides/get-gt.md)
 
