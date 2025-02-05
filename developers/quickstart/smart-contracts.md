@@ -12,7 +12,7 @@ mkdir hardhat && cd hardhat
 ```bash
 npm init -y
 ```
-![console output](../../.gitbook/assets/init_package.png)
+![console output](../../.gitbook/assets/images/init_package.png)
 
 
 ### 1.3 Install Hardhat
@@ -24,7 +24,7 @@ npm install hardhat
 ```bash
 npx hardhat init
 ```
-![console output](../../.gitbook/assets/init_hardhat.png)
+![console output](../../.gitbook/assets/images/init_hardhat.png)
 
 ### 1.5 Select Project Type
 Choose `Create an empty hardhat.config.js` option, which will create a basic Hardhat configuration file for your project.
