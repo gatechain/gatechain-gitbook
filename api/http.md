@@ -425,7 +425,178 @@ POST /v1/vault-account/update-clearing-height
 }
 ```
 
-### 8. Query The Latest Block Information
+### 8. Clear Account Transaction
+
+> The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
+
+
+**Interface Path**
+
+```bash
+POST /v1/vault-account/clear
+```
+
+
+**Request Body Example**
+
+```json
+{
+    "base_req": {
+    "from": "gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account,which is the Retrieval Account to the Vault Account
+    "memo": "", //transaction remarks
+    "chain_id": "testnet", //chain ID
+    "gas": "200000", //gas consumed by this transaction
+    "fees": [ 
+      {
+        "denom": "NANOGT", //unit
+        "amount": "5000" //fee
+      }
+    ],
+    "simulate": false, //if calculate simulated gas?
+    "valid_height": [ //block height at which the transaction takes effect
+         "600",
+         "900"
+   ] 
+  },
+  "vaults": ["vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6"] //Vault Account address
+}
+```
+
+**Return Example**
+
+```json
+{
+    "type":"StdTx",
+    "value":{
+        "msg":[
+            {
+                "type":"MsgClearVaultAccount", //Transaction type
+                "value":{
+                    "from_address":"gt11ja8j8qskxvccwf3rchp9efxjdu6v5wfkj5uwu4cmktue7h7ufjwqlgqs9ja64xj9kgd5zj", //sender account,which is Retrieval Account to the Vault Account
+                    "vault_address":[
+                        "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6" //Vault Account
+                    ]
+                }
+            }
+        ],
+        "fee":{
+            "amount":[
+                {
+                    "denom":"NANOGT", //unit
+                    "amount":"5000" //fee
+                }
+            ],
+            "gas":"200000" //gas consumed by this transaction
+        },
+        "signatures":null, //Signature
+        "memo":"",
+        "valid_height": [ //block height at which the transaction takes effect
+            "600",
+            "900"
+        ] 
+    }
+}
+```
+
+### 9. Query Vault Account Information
+
+**Interface Path**
+
+```bash
+GET  /v1/vault-account/{address}
+```
+
+**Parameter Explanation**
+
+| Parameter | Type | Description |
+|------|------|------|
+| address | String |Vault Account |
+
+
+**Return Example**
+
+```json
+{
+    "height": "4618", //block height
+    "result": {
+        "type": "AccountResp",
+        "value": {
+            "account_field": {
+                "type": "VaultAccount",
+                "value": {
+                    "base_account": {
+                        "account_number": "12",
+                        "address": "vault112t7hfsmd63a2nz0vwqhpy3msd98vvl35qeuej2uavh2ssjls4f8amqtwgpq3pwksgdqfe6", //Vault Account
+                        "public_key": {
+                            "type": "gatechain/PubKeyEd25519",
+                            "value": "IK8RZV4tqj/m/s9eEY9agWXF42yA5U3s31Q0D6Zp1rI="
+                        },
+                        "sequence": "0",
+                        "tokens": [
+                            {
+                                "amount": "9889", //account balance
+                                "denom": "NANOGT" //unit
+                            }
+                        ]
+                    },
+                    "clearing_height": {
+                        "last_clearing_effect_height": "0", //transaction height when set up clearing height last time
+                        "last_clearing_height": "0", //clearing height set last time
+                        "next_clearing_effect_height": "3693", //transaction height when set up  new clearing height
+                        "next_clearing_height": "100000" //new clearing height
+                    },
+                    "delay_height": "100", //delay height before a transaction takes effect
+                    "received_revocable_tokens": null, //token that can be revoked
+                    "security_address": "gt116h05fjhaay7sx3zl9w5ej3tpx3s94yhcsmt0gqcqsq26w2qvsyt4l82vftygtff0pfsr93", //Retrieval Account
+                    "sent_revocable_tokens": [], //token sent and revocable
+                    "vault_address": null //Vault Account 
+                }
+            },
+            "account_type": 1 //account type：0.ingle signature Standard Account,1.single signature Vault Account,2.multisignature Standard Account,3.multisignature Vault Account 
+        }
+    }
+}
+```
+
+### 10. Query Revocable Transaction List From A Vault Account 
+
+**Interface Path**
+
+```bash
+GET  /v1/vault-account/list-revocable-txs/{vault-account}
+```
+
+**Parameter Explanation**
+
+| Parameter | Type | Description |
+|------|------|------|
+| vault-account | String |Vault Account |
+
+
+**Return Example**
+
+```json
+{
+    "height":"6947", //block height
+    "result":[
+        {
+            "height":"6947", //block height at which  the transaction takes effect
+            "msg_index":"0",
+            "tokens":[
+                {
+                    "amount":"5", //transfer token amount
+                    "denom":"NANOGT" //unit
+                }
+            ],
+            "tx_hash":"REVOCABLEPAY-BB042E7853D6E32C6F81E0205A3CDD5FDA6545F2A7E92627E50EA19F86EFD6B8" //transaction hash
+        }
+    ]
+}
+```
+
+
+
+### 11. Query The Latest Block Information
 
 **Interface Path**
 
@@ -471,7 +642,7 @@ GET /v1/block/latest
 }
 ```
 
-### 9. Query A Specific BLock Information
+### 12. Query A Specific BLock Information
 
 **Interface Path**
 
@@ -523,7 +694,7 @@ GET /v1/block/{height}
 }
 ```
 
-### 10. Send Transaction
+### 13. Send Transaction
 
 **Interface Path**
 
@@ -643,7 +814,7 @@ After locally singing a transaction,  you just need to copy the signatures file 
 }
 ```
 
-### 11. Normal Transaction
+### 14. Normal Transaction
 
 
 **Interface Path**
@@ -725,7 +896,7 @@ GET /v1/tx/send/{address}
 }
 ```
 
-### 12. Query Transaction
+### 15. Query Transaction
 
 **Interface Path**
 
@@ -870,7 +1041,7 @@ GET /v1/tx/{hash}
 }
 ```
 
-### 13. Send a Revocable Transaction
+### 16. Send a Revocable Transaction
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 **Interface Path**
@@ -956,7 +1127,7 @@ POST  /v1/revocable-tx/send/{address}
 }
 ```
 
-### 14. Revoke a Revocable Transaction
+### 17. Revoke a Revocable Transaction
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1041,7 +1212,7 @@ POST /v1/revocable-tx/revoke/{tx-hash}
 }
 ```
 
-### 15. Query Revocable Transaction Status
+### 18. Query Revocable Transaction Status
 
 **Interface Path**
 
@@ -1066,7 +1237,7 @@ GET /v1/revocable-tx/status/{hash}
 }
 ```
 
-### 16. Issue Token 
+### 19. Issue Token 
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1151,7 +1322,7 @@ POST  /v1/token/issue/{symbol}
 ```
 
 
-### 17. Issue Additional Token
+### 20. Issue Additional Token
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1231,7 +1402,7 @@ POST /v1/token/mint/{symbol}
 ```
 
 
-### 18. Freeze Token
+### 21. Freeze Token
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1304,7 +1475,7 @@ POST /v1/token/freeze/{symbol}
 }
 ```
 
-### 19. Unfreeze Token
+### 22. Unfreeze Token
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1377,7 +1548,7 @@ POST /v1/token/unfreeze/{symbol}
 }
 ```
 
-### 20. Burn Token 
+### 23. Burn Token 
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1454,7 +1625,7 @@ POST /v1/token/burn/{symbol}
 }
 ```
 
-### 21. Query Token Information 
+### 24. Query Token Information 
 
 **Interface Path**
 
@@ -1489,7 +1660,7 @@ GET  /v1/token/show/{symbol}
 }
 ```
 
-### 22. Query All Token
+### 25. Query All Token
 
 **Interface Path**
 
@@ -1530,7 +1701,7 @@ GET  /v1/token/list
 ```
 
 
-### 23. Query Foundation Member List
+### 26. Query Foundation Member List
 
 **Interface Path**
 
@@ -1565,7 +1736,7 @@ GET  v1/foundation/members
 }
 ```
 
-### 24. Query Foundation Member Information
+### 27. Query Foundation Member Information
 
 **Interface Path**
 
@@ -1606,7 +1777,7 @@ GET  /v1/foundation/member/{address}
 }
 ```
 
-### 25. Delegate Token To Consensus Account
+### 28. Delegate Token To Consensus Account
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -1694,7 +1865,7 @@ POST /v1/staking/delegator/{delegatorAddr}/delegate
 }
 ```
 
-### 26. Query Delegation Information of A Delegator Account In A Consensus Account 
+### 29. Query Delegation Information of A Delegator Account In A Consensus Account 
 
 **Interface Path**
 
@@ -1723,7 +1894,7 @@ GET  /v1/staking/delegator/{delegatorAddr}/{con-account}/delegations
 }
 ```
 
-### 27. Query Delegation Information of A Delegator Account In All Consensus Accounts
+### 30. Query Delegation Information of A Delegator Account In All Consensus Accounts
 
 **Interface Path**
 
@@ -1753,7 +1924,7 @@ GET  /v1/staking/delegator/{delegatorAddr}/delegations
 }
 ```
 
-### 28. Query Consensus Accounts Information For All Delegations of An Account
+### 31. Query Consensus Accounts Information For All Delegations of An Account
 
 **Interface Path**
 
@@ -1801,7 +1972,7 @@ GET /v1/staking/delegator/{delegatorAddr}/con-accounts
 ```
 
 
-### 29. Query A List of Delegation Transactions of A Delegator Account
+### 32. Query A List of Delegation Transactions of A Delegator Account
 
 **Interface Path**
 
@@ -1954,7 +2125,7 @@ GET  /v1/tx?message.sender={delegatorAddr}&limit=1&page=1&message.action={delega
 ]
 ```
 
-### 30. Shift Delegation
+### 33. Shift Delegation
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2046,7 +2217,7 @@ POST /v1/staking/delegator/{delegatorAddr}/redelegate
 }
 ```
 
-### 31. Query Delegation Shifts 
+### 34. Query Delegation Shifts 
 
 
 **Interface Path**
@@ -2088,7 +2259,7 @@ GET /v1/staking/redelegations?delegator={delegatorAddr}&con-account_from={con-ac
 ```
 
 
-### 32. Undelegate From A Consensus Account
+### 35. Undelegate From A Consensus Account
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2177,7 +2348,7 @@ POST  /v1/staking/delegator/{delegatorAddr}/undelegate
 }
 ```
 
-### 33. Release of delegation through security account
+### 36. Release of delegation through security account
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2250,7 +2421,7 @@ POST  /v1/staking/delegator/undelegate_by_retrieval_account
 }
 ```
 
-### 34. Query Undelegations of A Delegator Account in A consensus Account
+### 37. Query Undelegations of A Delegator Account in A consensus Account
 
 **Interface Path**
 
@@ -2285,7 +2456,7 @@ GET /v1/staking/delegator/{delegatorAddr}/{con-account}/undelegations
 }
 ```
 
-### 35. Query Undelegations of A Delegator Account in All consensus Accounts
+### 38. Query Undelegations of A Delegator Account in All consensus Accounts
 
 **Interface Path**
 
@@ -2321,7 +2492,7 @@ GET /v1/staking/delegator/{delegatorAddr}/undelegations
 }
 ```
 
-### 36. Query All Delegations Of A Specific Consensus Account
+### 39. Query All Delegations Of A Specific Consensus Account
 
 **Interface Path**
 
@@ -2354,7 +2525,7 @@ GET /v1/staking/con-account/{con-account}/delegations
 ```
 
 
-### 37. Query All Undelegations Of A Specific Consensus Account
+### 40. Query All Undelegations Of A Specific Consensus Account
 
 **Interface Path**
 
@@ -2391,7 +2562,7 @@ GET /v1/staking/con-account/{con-account}/undelegations
 }
 ```
 
-### 38. Query Staking Pool
+### 41. Query Staking Pool
 
 **Interface Path**
 
@@ -2411,7 +2582,7 @@ GET /v1/staking/pool
 }
 ```
 
-### 39. Query Staking Parameters
+### 42. Query Staking Parameters
 
 **Interface Path**
 
@@ -2437,7 +2608,7 @@ GET /v1/staking/parameters
 ```
 
 
-### 40. Setup Account to Fetch Income
+### 43. Setup Account to Fetch Income
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2518,7 +2689,7 @@ Description：
 
 > The vault account can only withdraw the income and principal to this account and cannot be set up separately.
 
-### 41. Delegator Account Fetch Partial Income From A Consensus Account
+### 44. Delegator Account Fetch Partial Income From A Consensus Account
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2594,7 +2765,7 @@ POST /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards
 }
 ```
 
-### 42.Delegator Account Fetch All Income From A Consensus Account
+### 45.Delegator Account Fetch All Income From A Consensus Account
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2669,7 +2840,7 @@ POST /v1/distribution/delegator/{delegatorAddr}/rewards
     }
 }
 ```
-### 43.Reinvestment the rewards of the delegator account into the consensus account
+### 46.Reinvestment the rewards of the delegator account into the consensus account
 > The interface generates transaction body for " Change Clearing Height".After locally signing it, you can invoke "Send Transaction" interface to finish broadcasting.
 
 
@@ -2746,7 +2917,7 @@ POST /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards_reinvestme
 }
 ```
 
-### 44.Query Delegation Income of A Delegator Account At A Consensus Account 
+### 47.Query Delegation Income of A Delegator Account At A Consensus Account 
 
 **Interface Path**
 
@@ -2774,7 +2945,7 @@ GET  /v1/distribution/delegator/{delegatorAddr}/{con-account}/rewards
     ]
 }
 ```
-### 45.Query Delegation Income of A Delegator Account At All Consensus Account
+### 48.Query Delegation Income of A Delegator Account At All Consensus Account
 
 **Interface Path**
 
@@ -2817,7 +2988,7 @@ GET  /v1/distribution/delegator/{delegatorAddr}/rewards
 }
 ```
 
-### 46.Query Delegation Income Pending Paying By A Consensus Account
+### 49.Query Delegation Income Pending Paying By A Consensus Account
 
 **Interface Path**
 
@@ -2845,7 +3016,7 @@ GET /v1/distribution/con-account/{con-account}/outstanding_rewards
     ]
 }
 ```
-### 47.Query Consensus Account Income
+### 50.Query Consensus Account Income
 
 **Interface Path**
 
@@ -2874,7 +3045,7 @@ GET /v1/distribution/con-account/{con-account}/rewards
 }
 ```
 
-### 47.Query Distribution And Foundation Parameters
+### 51.Query Distribution And Foundation Parameters
 
 **Interface Path**
 
