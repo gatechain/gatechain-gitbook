@@ -15,3 +15,13 @@ Through high performance, low cost, and cross-chain interoperability, Gatechain 
 
 ### Ecosystem Advancement
 Gatechain is not just a technical platform but an open ecosystem. Through deep integration with various cutting-edge applications, Gatechain strives to become a core driving force in promoting large-scale Web3 development, supporting the rapid growth and prosperity of various asset forms (such as MEME, AI tokens, RWA, etc.) and decentralized applications.
+
+
+## Getting Started
+
+For detailed information on building on GateChain, please refer to:
+- [Developer Documentation](../developers/introduction.md)
+- [API Reference](../api/README.md)
+- [Quick Start Guide](../developers/quickstart.md)
+
+Join our growing ecosystem and build the future of decentralized applications on GateChain.
