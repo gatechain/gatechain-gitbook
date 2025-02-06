@@ -12,10 +12,6 @@ Via Cli or API, you can issue your own digital assets on GateChain.
 
 The issuer may fill in the parameters according to the requirements. After being verified, the issuer can publish his own digital asset in the form of a token on GateChain. Below are the related commands:
 
-* [Operational Details for CLI](../../developers/cli/token/index.md)
-
-* [Operational Details for API](../../developers/api/token/index.md)
-
 > Token issuance incurs a fee of 200GT, please make sure you have adequate GT token at account.
 
 

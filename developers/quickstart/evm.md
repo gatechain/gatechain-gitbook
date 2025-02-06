@@ -10,7 +10,7 @@ While providing the easy-to-use, we are also providing the native asset security
 
 Besides compatibility on account level, "GateChain-EVM" is fully compatible with "EVM" smart contract code. Any smart contract that runs on "Ethereum" will run on GateChain seamlessly.
 
-"GateChain-EVM" supports a full range of "Ethereum" ecosystem products. Browser wallet (e.g MetaMask)[[How to Connect]](../.././integration/tool-metamask/index.md), developer tools, (e.g Remix)[[How to Connect]](../.././integration/tool-remix/index.md)，can easily connect to "GateChain" to help you get started and play in the DeFi world. For example, you can simply set up the "GateChain" network and use the same private key/public key/address on "Ethereum" account to make transfers and contracts calls. Note: using the same private key/public key/address is highly discouraged.
+"GateChain-EVM" supports a full range of "Ethereum" ecosystem products. Browser wallet (e.g MetaMask), developer tools, (e.g Remix)，can easily connect to "GateChain" to help you get started and play in the DeFi world. For example, you can simply set up the "GateChain" network and use the same private key/public key/address on "Ethereum" account to make transfers and contracts calls. Note: using the same private key/public key/address is highly discouraged.
 
 "GT" as the fuel to "GateChain" mainnet is also used as the only asset to pay Gas in "GateChain-EVM". A certain amount of "GT" will be needed to deploy and call contracts. This will extend the GT usage and benefits GT holders. 
 

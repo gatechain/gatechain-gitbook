@@ -14,7 +14,7 @@ A new type of account that features revocable transactions. Assets in this type 
 
 ### Consensus Account
 
-Build a GateChain Full Node and Work as a Consensus Account.By building a full node to participate in the consensus, you can earn delegation commission on top of your mining revenue, as you can opt to accept delegations from other accounts.[Build Guide](../../../developers/gatechain-pos/index.md)
+Build a GateChain Full Node and Work as a Consensus Account.By building a full node to participate in the consensus, you can earn delegation commission on top of your mining revenue, as you can opt to accept delegations from other accounts.
 
 ### EVM Account
 
