@@ -14,7 +14,7 @@
   * [Accounts](getting-started/wallet/accounts.md)
   * [Staking](getting-started/wallet/staking.md)
   * [Governance](getting-started/wallet/governance.md)
-* [Guides]
+* [Guides](getting-started/guides.md)
   * [Cross-chain Bridge](getting-started/guides/bridge.md)
   * [Create a Token](getting-started/guides/create-token.md)
   * [Published to trading market](getting-started/guides/listing.md)
