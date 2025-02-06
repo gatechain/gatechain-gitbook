@@ -10,10 +10,10 @@
 
 ## Getting Started
 * [Wallet](getting-started/wallet.md)
-  * [Create Wallet](getting-started/create-wallet.md)
-  * [Accounts](getting-started/accounts.md)
-  * [Staking](getting-started/staking.md)
-  * [Governance](getting-started/governance.md)
+  * [Create Wallet](getting-started/wallet/create-wallet.md)
+  * [Accounts](getting-started/wallet/accounts.md)
+  * [Staking](getting-started/wallet/staking.md)
+  * [Governance](getting-started/wallet/governance.md)
 * [Guides](getting-started/guides.md)
   * [Cross-chain Bridge](getting-started/guides/bridge.md)
   * [Create a Token](getting-started/guides/create-token.md)
@@ -34,7 +34,7 @@
   * [Concepts](developers/introduction/services.md)
     * [Fee Proxy](developers/introduction/services/fee-proxy.md)
     * [Account Types and Structure](developers/introduction/services/accounts.md)
-    * [Wallet](developers/introduction/services/README.md)
+    * [Wallet](developers/introduction/services/wallet.md)
 * [Quick Start](developers/quickstart.md)
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
   * [Frontend App](developers/quickstart/frontend.md)
