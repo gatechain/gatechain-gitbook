@@ -21,12 +21,3 @@ Build a GateChain Full Node and Work as a Consensus Account.By building a full n
 An EVM Account is similar to a native Ethereum account in use case, format, and security.You can log on GateChain directly with your Ethereum account getting access to GateChain’s EVM, without needing to create a new account.
 
 Besides simplicity and convenience, GateChain is also characterized by an unparalleled level of security. Transactions can occur directly between GateChain vault accounts and EVM-accounts, accessing innovative features such as retrievable transactions and a clearing!
-
-
- 
-
-
-
-
-
-
