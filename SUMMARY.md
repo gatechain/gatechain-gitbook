@@ -30,7 +30,7 @@
   * [Smart Contracts](developers/introduction/smart-contracts.md)
   * [Virtual Machine (VM)](developers/introduction/vm/README.md)
     * [EVM](developers/introduction/vm/evm.md)
-    * [SVM](developers/introduction/vm/svm.md)
+    <!-- * [SVM](developers/introduction/vm/svm.md) -->
   * [Concepts](developers/introduction/services.md)
     * [Fee Proxy](developers/introduction/services/fee-proxy.md)
     * [Account Types and Structure](developers/introduction/services/accounts.md)
@@ -39,7 +39,7 @@
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
   * [Frontend App](developers/quickstart/frontend.md)
   * [EVM](developers/quickstart/evm.md)
-  * [SVM](developers/quickstart/svm.md)
+  <!-- * [SVM](developers/quickstart/svm.md) -->
 
 ## Nodes and Validators
 * [Nodes](nodes/README.md)

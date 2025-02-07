@@ -158,4 +158,6 @@ main().catch((error) => {
 npx hardhat run scripts/deploy.js --network Mainnet
 ```
 ![alt text](../../.gitbook/assets/images/create_token_03.png)
+
+
 ![alt text](../../.gitbook/assets/images/create_token_04.png)

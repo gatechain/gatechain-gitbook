@@ -87,24 +87,3 @@ Voting parameters:
 | quorum | Minimum participation rate | 40% |
 | threshold | Passing threshold | 50% |
 
-## Best Practices
-
-1. Active Participation
-   - Monitor proposal updates
-   - Vote rationally
-   - Provide constructive feedback
-
-2. Proposal Preparation
-   - Thorough argumentation
-   - Wide discussion
-   - Reasonable planning
-
-3. Voting Decisions
-   - Deep understanding of proposals
-   - Impact assessment
-   - Responsible voting
-
-4. Execution Supervision
-   - Track implementation
-   - Report issues
-   - Summarize experiences

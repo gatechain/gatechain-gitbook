@@ -3,24 +3,24 @@
 
   1. Goto <a href="https://www.hipo.com/en/" target="_blank">Hipo.com</a>，Click "GateBridge" module;
   
- ![](../../.gitbook/assets/images/bridge.png)
+![](../../.gitbook/assets/images/bridge.png)
 
-  1. Enter the GateBridge module, click "Liquidity" and select the token to add liquidity;
+  2. Enter the GateBridge module, click "Liquidity" and select the token to add liquidity;
 
 ![](../../.gitbook/assets/images/bridge-1.png)
 
-  1. Chose the right network, click "Add" and input the token amount. If this is the first time, you have to approve the token contract;
+  3. Chose the right network, click "Add" and input the token amount. If this is the first time, you have to approve the token contract;
   
- ![](../../.gitbook/assets/images/bridge-2.png)
+![](../../.gitbook/assets/images/bridge-2.png)
   	  	
 ![](../../.gitbook/assets/images/bridge-4.png)
 
-  1. After the approve tx confirmed, click "Supply", and sign tx in your wallet;
+  4. After the approve tx confirmed, click "Supply", and sign tx in your wallet;
 
 ![](../../.gitbook/assets/images/bridge-5.png)
 
  
-  1. After signing tx, you can switch "History" tab to check the tx status.
+  5. After signing tx, you can switch "History" tab to check the tx status.
   	
 ![](../../.gitbook/assets/images/bridge-6.png)
   
@@ -30,11 +30,11 @@
 
 ![](../../.gitbook/assets/images/bridge-7.png)
 
-1. The ratio of LP tokens can be selected, if this is the first time, you should approve the token contract;
+2. The ratio of LP tokens can be selected, if this is the first time, you should approve the token contract;
 
 ![](../../.gitbook/assets/images/bridge-8.png)
 
-1. After the approve tx confirmed, click "Confirm" and sign this tx；
+3. After the approve tx confirmed, click "Confirm" and sign this tx；
 
 ![](../../.gitbook/assets/images/bridge-9.png)
 

@@ -36,25 +36,6 @@ Main parameters for vault accounts:
 | clearing_height | Account clearing height |
 | security_address | Recovery account address |
 
-#### Create Vault Account
-
-Create vault account via API:
-
-```bash
-POST /v1/vault-account/create/{base-account}
-```
-
-#### Modify Clearing Height
-
-```bash
-POST /v1/vault-account/update-clearing-height
-```
-
-#### Account Clearing
-
-```bash
-POST /v1/vault-account/clear
-```
 
 ### 3. Multi-signature Account
 
