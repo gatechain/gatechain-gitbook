@@ -3067,5 +3067,3 @@ GET /v1/distribution/parameters
     }
 }
 ```
-
-## EVM API
