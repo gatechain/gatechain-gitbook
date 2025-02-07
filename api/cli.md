@@ -47,7 +47,7 @@ gatecli [Help1] [Help2] [Help3]... --help
 **Notes**
 - For more information about command line operations, use the help command
 
-### Errors
+#### Errors
 ```bash
 Must specify these options: --chain-id  when --trust-node is false
 ```
@@ -629,24 +629,6 @@ Con-account
   Power Rate:                 1.000152230759201952
   Description:                {   }
   Commission:                 rate: 0.000000000000000000, maxRate: 0.000000000000000000, maxChangeRate: 0.000000000000000000, updateTime: 1970-01-01 00:00:00 +0000 UTC
-```
-
-### 4. Query Local Consensus Account List
-
-**Command**
-```bash
-gatecli con-account list-key --chain-id [chain ID]
-```
-
-**Parameters**
-
-| Parameter | Type | Description |
-|------|------|------|
-| chain-id | String | Chain ID of the network |
-
-**Example**
-```bash
-gatecli con-account list-key --chain-id testnet
 ```
 
 ## Distribution Management
@@ -1298,7 +1280,7 @@ Undelegations between:
 		Expected balance:          10 //undelegated amount
 ```
 
-### 10.Query Undelegations of A Delegator Account in All consensus Accounts 
+### 11.Query Undelegations of A Delegator Account in All consensus Accounts 
 
 **Command**
 ```bash
@@ -1331,7 +1313,7 @@ Undelegations between:
 	...
 ```
 
-### 11.Query All Delegations Of A Specific Consensus Account
+### 12.Query All Delegations Of A Specific Consensus Account
 
 **Command**
 ```bash
@@ -1360,7 +1342,7 @@ Delegation:
 	...
 ```
 
-### 12.Query All Delegation Shifts For A Specific Consensus Account 
+### 13.Query All Delegation Shifts For A Specific Consensus Account 
 
 **Command**
 ```bash
@@ -1394,7 +1376,7 @@ Redelegations between:
       Balance:                   10 //token amount of shift delegation 
 ```
 
-### 13.Query All Undelegations Of A Specific Consensus Account
+### 14.Query All Undelegations Of A Specific Consensus Account
 
 **Command**
 ```bash
@@ -1428,7 +1410,7 @@ Undelegations between:
 ```
 
 
-### 14. Query Staking Pool
+### 15. Query Staking Pool
 
 **Command**
 ```bash
@@ -1448,7 +1430,7 @@ Pool:
   Bonded Tokens:      0
 ```
 
-### 15. Query Staking Parameters
+### 16. Query Staking Parameters
 
 **Command**
 ```bash
