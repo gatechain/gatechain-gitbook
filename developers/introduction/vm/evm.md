@@ -16,9 +16,6 @@ The EVM has a stack-based architecture, storing all in-memory values on a stack.
 
 There is also a set of environment variables and data that is available during execution. We will go through these in more detail later in this chapter.
 
-### The Ethereum Virtual Machine (EVM) Architecture and Execution Context
-
-![The Ethereum Virtual Machine (EVM) Architecture and Execution Context](Figure 1. The Ethereum Virtual Machine (EVM) Architecture and Execution Context)
 
 ## Comparison with Existing Technology
 

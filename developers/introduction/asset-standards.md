@@ -10,7 +10,7 @@ Asset owners can additionally issue, burn, and freeze/unfreeze their assets. The
 
 Via Cli or API, you can issue your own digital assets on GateChain.
 
-The issuer may fill in the parameters according to the requirements. After being verified, the issuer can publish his own digital asset in the form of a token on GateChain. Below are the related commands:
+The issuer may fill in the parameters according to the requirements. After being verified, the issuer can publish his own digital asset in the form of a token on GateChain. 
 
 > Token issuance incurs a fee of 200GT, please make sure you have adequate GT token at account.
 

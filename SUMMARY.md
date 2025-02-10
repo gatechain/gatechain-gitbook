@@ -55,7 +55,6 @@
 * [API Reference](api/README.md)
   * [HTTP API](api/http.md)
   * [EVM API](api/evm.md)
-  * [WebSocket API](api/websocket.md)
 * [Command Line Tools](api/cli.md)
 * [SDK](api/sdk/README.md)
   * [JavaScript](api/sdk/javascript.md)

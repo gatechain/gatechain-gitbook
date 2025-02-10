@@ -11,33 +11,13 @@ GateChain is a high-performance blockchain platform that supports:
 - NFT platforms
 - Enterprise solutions
 
-## Quick Start
-
-### 1. Development Environment Setup
-```bash
-# Install GateChain CLI
-curl -L https://github.com/gatechain/gatechain-cli/releases/latest/download/install.sh | bash
-
-# Initialize development environment
-gatechaind init local-dev --chain-id=dev-1
-```
-
-### 2. Connect to Network
-```bash
-# Connect to testnet
-gatechaind start --chain-id=gatechain-test-1
-
-# Connect to mainnet
-gatechaind start --chain-id=gatechain-main-1
-```
 
 ## Smart Contract Development
 
 ### Supported Standards
 - ERC20 / GRC20
 - ERC721 / GRC721
-- ERC1155
-- Custom standards
+
 
 ### Development Tools
 - Truffle/Hardhat support
@@ -50,31 +30,6 @@ gatechaind start --chain-id=gatechain-main-1
 ### RPC Endpoints
 - HTTP API
 - WebSocket API
-- GraphQL API (coming soon)
-
-### SDK Support
-- JavaScript/TypeScript
-- Python
-- Go
-- Java
-
-## Security Guidelines
-
-### Best Practices
-1. Smart Contract Security
-   - Audit requirements
-   - Common vulnerabilities
-   - Testing procedures
-
-2. Key Management
-   - Secure storage
-   - Access control
-   - Backup procedures
-
-3. Transaction Safety
-   - Gas estimation
-   - Error handling
-   - Revert conditions
 
 ## Resources
 
