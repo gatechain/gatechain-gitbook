@@ -1,19 +1,81 @@
 # Staking
 
-Centralized mining is a crucial factor that must be considered in the staking process. Although various decentralized staking protocols have emerged in the market over the past few years, a small number of validators and staking service providers still control most of the network. Fundamentally, if independent validators offer a relatively poor user experience, we will see a large amount of network participation occurring through external staking services—as they lower the cognitive barrier for end users. Therefore, GateChain's design process strives to avoid this issue.
+## Overview
 
-Most POS models require accounts participating in consensus to stake a certain amount of assets. Accounts with higher stake amounts are more likely to be selected into the Validators Set. The consensus process only occurs among validators, and block rewards are distributed proportionally according to the staked amounts. Moreover, staked assets cannot be freely transferred or moved. This design has three main drawbacks:
+GateChain fundamentally abandons the traditional staking approach. Any account can become a consensus account and participate in block consensus to receive rewards by simply paying a regular transaction fee.
 
-1. The qualification for participating in block consensus becomes a bidding target. Accounts with fewer assets cannot become independent validators through staking. If they want to participate in consensus and receive block rewards, they can only do so by delegating to accounts with more assets or professional POS mining institutions.
+### Key Advantages
 
-2. Network centralization issues. Since the validator set is determined by staked asset rankings and remains fixed for a period, network attacks or physical node failures can affect consensus achievement and network security.
+1. **No Minimum Asset Requirement**: The probability of being selected for the committee only relates to consensus weight and loyalty coefficient. A properly configured node can participate in consensus and earn rewards without asset delegation.
 
-3. Scalability issues. As the mainnet expands and the amount of staking gradually increases, the number of validators cannot increase linearly, as this would affect block consensus speed.
+2. **Enhanced Security**: The committee is randomly elected during each consensus round (guaranteed by VRF algorithm), making it difficult for hackers to launch attacks. Node failures only affect individual consensus participation without significantly impacting network operation.
 
-GateChain fundamentally abandons the staking approach. Any account can become a consensus account and participate in block consensus to receive rewards by just paying a regular transaction fee.
+3. **Scalability**: Since the committee size is part of the mainnet consensus, the network can maintain efficient consensus achievement even as it expands.
 
-1. Accounts with fewer assets need not worry, as the probability of being selected for the committee only relates to consensus weight and loyalty coefficient. A properly configured node can participate in consensus and earn rewards without asset delegation.
+## Why GateChain's Approach is Different
 
-2. Since the committee is randomly elected during each consensus round (guaranteed by VRF algorithm), hackers cannot launch attacks in such a short time. When a node goes offline, it only affects that node's consensus and won't significantly impact network operation. (Through the consensus account heartbeat mechanism, the network can quickly restore consensus speed after large accounts go offline)
+Most POS models require accounts to stake a certain amount of assets for consensus participation. Traditional staking models face several challenges:
 
-3. Since the committee size is part of the mainnet consensus, as the network expands, the committee size can still maintain a reasonable range, ensuring quick consensus achievement.
+1. **High Entry Barriers**: Consensus participation becomes a bidding target, excluding accounts with fewer assets from becoming independent validators.
+
+2. **Centralization Risk**: Fixed validator sets based on staked asset rankings can compromise network security and consensus achievement.
+
+3. **Limited Scalability**: Linear validator growth can impede block consensus speed as the network expands.
+
+## Key Concepts
+
+### Loyalty Coefficient (LoyaltyParam)
+
+- Initial value: 1
+- Maximum value: 2
+- Purpose: Acts as an "amplification factor" for user weight
+- Benefits: Rewards consistent consensus participation with additional voting power
+- Penalties: Decreases due to malicious voting, extended inactivity, or power reduction
+
+### Slashing Mechanism
+
+Malicious behavior includes:
+- Voting for multiple proposals in the same phase
+- Consequences:
+  - Reduced loyalty coefficient
+  - Decreased consensus weight
+  - Possible consensus participation ban
+  - Affected delegation rewards
+
+## Participation Methods
+
+### 1. Running a Full Node
+
+Benefits:
+- Direct consensus participation
+- Earning delegation commission
+- Full mining revenue
+
+### 2. GT Delegation
+
+Features:
+- No minimum delegation amount
+- Available to all account types
+- Immediate effect
+- 0-day freeze period for redelegation/undelegation
+- Recommended for vault accounts
+
+### Reward Distribution
+
+#### Block Rewards
+- Additional: Transaction fees
+- Weight calculation: (Currency holdings + delegation GT quantity) * Loyalty coefficient
+
+#### Committee Distribution Rules
+
+1. Three consensus accounts:
+   - Normal range: 27-40% based on weight
+   - Outside range: Fixed 40%-33%-27% split
+
+2. Two consensus accounts:
+   - Normal range: 40-60% based on weight
+   - Outside range: Fixed 60%-40% split
+
+3. Single consensus account:
+   - Receives 100% of rewards
+

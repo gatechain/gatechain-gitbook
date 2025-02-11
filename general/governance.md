@@ -1,6 +1,5 @@
 # 1. **DAO-Driven Decentralized Governance**
-- **On-Chain Proposals and Voting**:  
-  GateChain implements decentralized governance through **GateChain DAO**, where token holders can submit proposals and participate in on-chain voting to decide on protocol upgrades, fund allocation, and other key matters. Proposal types include technical improvements, ecosystem fund usage, and node management.
+
 - **Role of Governance Token (GT)**:  
   GT token holders' voting power is proportional to their holdings, and the system supports delegated voting, allowing users to delegate their voting rights to professional representatives to improve decision-making efficiency.
 
@@ -14,19 +13,12 @@
 
 ---
 
-## 3. **Proposal and Upgrade Process**
-- **Proposal Phase**:  
-  Any GT holder can submit governance proposals, requiring a certain amount of GT as proposal deposit to prevent abuse. Proposals must include technical details, budget requirements, and implementation roadmap.
-- **Voting and Execution**:  
-  Proposals are decided through on-chain voting, supporting various voting modes. Once approved, technical proposals undergo multi-signature verification and testnet deployment before final mainnet upgrade by nodes.
 
 ---
 
-## 4. **Economic Model and Governance Incentives**
+## 4. **GT Deflationary Mechanism**
 - **GT Deflationary Mechanism**:  
   GT token maintains deflation through transaction fee burning mechanism (partial fees from each transaction are destroyed) and periodic buyback-and-burn, enhancing token value and governance participation incentives.
-- **Ecosystem Fund Allocation**:  
-  GateChain establishes development funds and ecosystem incubators, with portions of on-chain revenue (such as cross-chain fees) supporting developer rewards, security audits, and community project incubation. Fund usage requires DAO voting approval.
 
 ---
 

@@ -1,21 +1,20 @@
 # Gatechain: One Chain, Infinite Possibilities
 
-Gatechain is a high-performance public blockchain designed to meet diverse application needs, dedicated to providing efficient, secure, and cost-effective blockchain infrastructure for a broad user base and various decentralized applications. Through innovative technical architecture, Gatechain supports high-frequency transactions, asset circulation, and cross-chain interoperability, aiming to promote the comprehensive adoption and deepening of the Web3 ecosystem.
+Gatechain is a high-performance public blockchain designed to meet diverse application needs, dedicated to providing efficient, secure, and cost-effective blockchain infrastructure for a broad user base and various decentralized applications. 
+GateChain is an EVM compatible Layer1 blockchain, utilizing GateMint to realize instant finality.
 
 ## Core Features
 
-### Diverse Application Support
-With its highly scalable technical architecture and low-latency performance, Gatechain efficiently supports various application scenarios, from simple payments to complex smart contract execution. Gatechain provides seamless and efficient underlying technical support for all use cases.
+### EVM compatible/identical
+"EVM" is a newly added GateChain module that supports smart contracts, enabling projects to build and deploy their products on GateChain~opening its doors to the miraculous world of decentralized finance.
 
-### Broad User Base Focus
-Gatechain's design considers the needs of different users, enabling both Web2 beginners and professional Web3 users to easily connect and enjoy a smooth experience. Through simplified onboarding processes and convenient asset management tools, Gatechain significantly lowers the barriers for users to participate in Web3, promoting widespread adoption of blockchain technology.
+With EVM as the smart engine for “GateChain” , we are now accessing the most active community in the crypto space and a full range of eco-products built on "Ethereum" network. "Ethereum" network has incubated a myriad of premium projects over the past few years, some of them even exploring the very frontier for the whole industry. With all those innovations made possible on top of the EVM, compatible to EVM has been one of the basic capabilities for most mainnets.
 
-### Optimized for Mass Adoption
-Through high performance, low cost, and cross-chain interoperability, Gatechain optimizes blockchain usability and scalability, providing a solid foundation for global mass user adoption. Whether for retail investors, large financial institutions, or enterprise-level applications, Gatechain provides an efficient, secure, and reliable blockchain environment that supports growing user demands.
 
-### Ecosystem Advancement
-Gatechain is not just a technical platform but an open ecosystem. Through deep integration with various cutting-edge applications, Gatechain strives to become a core driving force in promoting large-scale Web3 development, supporting the rapid growth and prosperity of various asset forms (such as MEME, AI tokens, RWA, etc.) and decentralized applications.
 
+### Gatemint
+
+Based on universal POS, GateChain has made more optimizations to make it easier for users to participate in network consensus and achieve asset gain and decentralized management. Different from most POS economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus and obtain reasonable benefits while protecting the safe and stable operation of GateChain.
 
 ## Getting Started
 

@@ -13,7 +13,7 @@
   * [Create Wallet](getting-started/wallet/create-wallet.md)
   * [Accounts](getting-started/wallet/accounts.md)
   * [Staking](getting-started/wallet/staking.md)
-  * [Governance](getting-started/wallet/governance.md)
+  <!-- * [Governance](getting-started/wallet/governance.md) -->
 * [Guides](getting-started/guides.md)
   * [Cross-chain Bridge](getting-started/guides/bridge.md)
   * [Create a Token](getting-started/guides/create-token.md)
@@ -31,10 +31,7 @@
   * [Virtual Machine (VM)](developers/introduction/vm/README.md)
     * [EVM](developers/introduction/vm/evm.md)
     <!-- * [SVM](developers/introduction/vm/svm.md) -->
-  * [Concepts](developers/introduction/services.md)
-    * [Fee Proxy](developers/introduction/services/fee-proxy.md)
-    * [Account Types and Structure](developers/introduction/services/accounts.md)
-    * [Wallet](developers/introduction/services/wallet.md)
+  <!-- * [Account Types and Structure](developers/introduction/accounts.md) -->
 * [Quick Start](developers/quickstart.md)
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
   * [Frontend App](developers/quickstart/frontend.md)
@@ -66,3 +63,8 @@
 * [FAQ](tools/faq.md)
 * [Faucet](tools/faucet.md)
 * [Popular dApps](tools/dapps.md)
+
+  * [GateChain Explorer](https://gatescan.org/)
+  * [GateWeb3 Wallet](https://www.gate.io/zh/web3)
+  * [GT Mining](https://www.gate.io/zh/web3/mining/gt?tab=All)
+  * [Swap](https://www.gate.io/zh/web3/swap/eth-bnb?input_chain=1&input_token=ETH&output_chain=56&output_token=BNB)
