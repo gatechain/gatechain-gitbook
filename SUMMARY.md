@@ -13,7 +13,6 @@
   * [Create Wallet](getting-started/wallet/create-wallet.md)
   * [Accounts](getting-started/wallet/accounts.md)
   * [Staking](getting-started/wallet/staking.md)
-  <!-- * [Governance](getting-started/wallet/governance.md) -->
 * [Guides](getting-started/guides.md)
   * [Cross-chain Bridge](getting-started/guides/bridge.md)
   * [Create a Token](getting-started/guides/create-token.md)
@@ -30,13 +29,10 @@
   * [Smart Contracts](developers/introduction/smart-contracts.md)
   * [Virtual Machine (VM)](developers/introduction/vm/README.md)
     * [EVM](developers/introduction/vm/evm.md)
-    <!-- * [SVM](developers/introduction/vm/svm.md) -->
-  <!-- * [Account Types and Structure](developers/introduction/accounts.md) -->
 * [Quick Start](developers/quickstart.md)
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
   * [Frontend App](developers/quickstart/frontend.md)
   * [EVM](developers/quickstart/evm.md)
-  <!-- * [SVM](developers/quickstart/svm.md) -->
 
 ## Nodes and Validators
 * [Nodes](nodes/README.md)

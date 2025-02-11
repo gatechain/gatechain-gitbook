@@ -5,7 +5,7 @@ GateChain is an EVM compatible Layer1 blockchain, utilizing GateMint to realize 
 
 ## Core Features
 
-### EVM compatible/identical
+### EVM Compatible
 "EVM" is a newly added GateChain module that supports smart contracts, enabling projects to build and deploy their products on GateChain~opening its doors to the miraculous world of decentralized finance.
 
 With EVM as the smart engine for “GateChain” , we are now accessing the most active community in the crypto space and a full range of eco-products built on "Ethereum" network. "Ethereum" network has incubated a myriad of premium projects over the past few years, some of them even exploring the very frontier for the whole industry. With all those innovations made possible on top of the EVM, compatible to EVM has been one of the basic capabilities for most mainnets.

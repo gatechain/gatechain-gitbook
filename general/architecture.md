@@ -6,4 +6,4 @@ At the consensus level, it draws inspiration from Algorand's consensus mechanism
 
 At the application layer, the new architecture provides standard interfaces to meet the requirements of various upper-layer applications, and offers SDK-based functions for offline account generation and transaction signing, providing convenient development tools for third-party ecosystem applications.
 
-![alt text](../.gitbook/assets/images/chain_01.png)
+![](../.gitbook/assets/images/chain_01.png)

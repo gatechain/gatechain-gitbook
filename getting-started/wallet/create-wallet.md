@@ -12,10 +12,10 @@ GateChain's Account type uses Ethereum's ECDSA secp256k1 curve for keys. Simply 
 
 As explained above, Ethereum-based wallets can be used to interact with GateChain. Right now, the most popular Ethereum-based wallets are supported on GateChain. These include:
 
-* MetaMask
-* Ledger
-* Trezor
-* Torus
+* [MetaMask](https://metamask.io/zh-CN/)
+* [Ledger](https://www.ledger.com/)
+* [Trezor](https://www.trezor.io/)
+* [Torus](https://tor.us/)
 
 The process of signing transactions on GateChain using an Ethereum-native wallet consists of:
 

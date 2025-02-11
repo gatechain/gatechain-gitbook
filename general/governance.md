@@ -1,11 +1,11 @@
-# 1. **DAO-Driven Decentralized Governance**
+# **DAO-Driven Decentralized Governance**
 
 - **Role of Governance Token (GT)**:  
   GT token holders' voting power is proportional to their holdings, and the system supports delegated voting, allowing users to delegate their voting rights to professional representatives to improve decision-making efficiency.
 
 ---
 
-## 2. **Consensus Nodes and Network Maintenance**
+## **Consensus Nodes and Network Maintenance**
 - **Node Election Mechanism**:  
   GateChain adopts a **Tendermint**-based consensus framework, combined with **Algorand's VRF (Verifiable Random Function) algorithm** to optimize node election process, ensuring high security and decentralization. Currently, the mainnet supports approximately 160 consensus nodes, which must stake GT tokens to participate in block generation and validation.
 - **Node Incentive Mechanism**:  
@@ -16,13 +16,13 @@
 
 ---
 
-## 4. **GT Deflationary Mechanism**
+## **GT Deflationary Mechanism**
 - **GT Deflationary Mechanism**:  
   GT token maintains deflation through transaction fee burning mechanism (partial fees from each transaction are destroyed) and periodic buyback-and-burn, enhancing token value and governance participation incentives.
 
 ---
 
-## 5. **Security and Risk Control**
+## **Security and Risk Control**
 - **Revocable Transaction Model (RTM)**:  
   To address governance attacks or operational errors, GateChain supports revocable transaction logic, allowing the reversal of abnormal proposals or malicious operations within a certain timeframe.
 - **Multi-signature and Auditing**:  
