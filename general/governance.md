@@ -14,8 +14,6 @@
 ---
 
 
----
-
 ## **GT Deflationary Mechanism**
 - **GT Deflationary Mechanism**:  
   GT token maintains deflation through transaction fee burning mechanism (partial fees from each transaction are destroyed) and periodic buyback-and-burn, enhancing token value and governance participation incentives.
