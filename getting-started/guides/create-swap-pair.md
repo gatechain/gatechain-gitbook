@@ -18,25 +18,25 @@ Anyone can become a liquidity provider (LP) by depositing an equivalent value of
 #### Steps to Add Liquidity
 1. Enter the "Liquidity Pool" module
 
-![Liquidity Pool Entry](../../.gitbook/assets/images/swap1.png)
+   ![Liquidity Pool Entry](../../.gitbook/assets/images/swap1.png)
 
 2. Switch network (if needed)
    
-![Switch Network](../../.gitbook/assets/images/swap2.png)
+   ![Switch Network](../../.gitbook/assets/images/swap2.png)
 
 3. Connect wallet
 
-![Connect Wallet](../../.gitbook/assets/images/swap3.png)
+   ![Connect Wallet](../../.gitbook/assets/images/swap3.png)
 
 4. Enter GateSwap Liquidity page
 
-![Liquidity Page](../../.gitbook/assets/images/swap5.png)
+   ![Liquidity Page](../../.gitbook/assets/images/swap5.png)
 
 5. Select tokens
    - Click "Input USDT" to select a token
    - Or input an ERC20 contract address (example: `0x3fb76f1bd8144889bc69402c76f5203426335526`)
 
-![Select Token](../../.gitbook/assets/images/swap6.png)
+   ![Select Token](../../.gitbook/assets/images/swap6.png)
 
 6. Authorization and confirmation
    - First-time users need wallet authorization
@@ -53,25 +53,30 @@ Anyone can become a liquidity provider (LP) by depositing an equivalent value of
 
 #### Removal Steps
 1. Click "Remove" in the "My Liquidity" module
+
    ![Remove Entry](../../.gitbook/assets/images/swap9.png)
 
 2. First-time removal requires authorization
+
    ![Remove Authorization](../../.gitbook/assets/images/swap10.png)
 
 3. Select removal percentage
    - Set the percentage you want to remove
    - Click "Authorize" for approval
+
    ![Confirm Removal](../../.gitbook/assets/images/swap11.png)
 
 4. Confirm removal
    - Click "Remove" button
    - Confirm the operation in your wallet
+
    ![Complete Removal](../../.gitbook/assets/images/swap12.png)
 
 ### 3. Quick Swap
 
 #### Swap Steps
 1. Enter the trading module
+
    ![Trading Entry](../../.gitbook/assets/images/swap13.png)
 
 2. Prerequisites
@@ -83,6 +88,7 @@ Anyone can become a liquidity provider (LP) by depositing an equivalent value of
    - Click "Swap" to enter quick swap page
    - Confirm swap information
    - Click "Confirm" and confirm in your wallet
+
    ![Confirm Swap](../../.gitbook/assets/images/swap14.png)
 
 4. Check your wallet balance changes after completion
