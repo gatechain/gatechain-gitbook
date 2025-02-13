@@ -1,33 +1,59 @@
 # Transactions
 
-Transactions are signed messages originated by an externally owned account, transmitted by the Ethereum network, and recorded on the Ethereum blockchain. This basic definition conceals a lot of surprising and fascinating details. Another way to look at transactions is that they are the only things that can trigger a change of state, or cause a contract to execute in the EVM. Ethereum is a global singleton state machine, and transactions are what make that state machine "tick," changing its state. Contracts don't run on their own. Ethereum doesn't run autonomously. Everything starts with a transaction.
+A transaction is a fundamental concept in blockchain that represents a signed data package, which triggers state changes in the blockchain. Transactions are the only way to modify the state of the blockchain and execute smart contracts.
 
+## Overview
 
-## The Structure of a Transaction
+Transactions in blockchain have the following characteristics:
+- They are signed messages originated from externally owned accounts (EOA)
+- They are transmitted through the network
+- They are recorded on the blockchain
+- They are the primary mechanism for state changes
+- They are required for smart contract execution
 
-First let's take a look at the basic structure of a transaction, as it is serialized and transmitted on the Ethereum network. Each client and application that receives a serialized transaction will store it in-memory using its own internal data structure, perhaps embellished with metadata that doesn't exist in the network serialized transaction itself. The network-serialization is the only standard form of a transaction.
+## Transaction Structure
 
-A transaction is a serialized binary message that contains the following data:
+A transaction contains the following essential components:
 
-- **Nonce**: A sequence number, issued by the originating EOA, used to prevent message replay
+### Basic Fields
 
-- **Gas price**: The price of gas (in wei) the originator is willing to pay
+| Field | Description |
+|-------|-------------|
+| Nonce | A sequence number issued by the originating EOA to prevent message replay |
+| Gas Price | The price of gas (in wei) the originator is willing to pay |
+| Gas Limit | The maximum amount of gas the originator is willing to buy for this transaction |
+| Recipient | The destination address |
+| Value | The amount of tokens to send to the destination |
+| Data | The variable-length binary data payload |
 
-- **Gas limit**: The maximum amount of gas the originator is willing to buy for this transaction
+### Signature Components
 
-- **Recipient**: The destination Ethereum address
+The transaction includes ECDSA digital signature components:
+- v: Signature component for recovery
+- r: First 32 bytes of the signature
+- s: Second 32 bytes of the signature
 
-- **Value**: The amount of ether to send to the destination
+### Additional Information
 
-- **Data**: The variable-length binary data payload
+While not part of the actual transaction data structure, the following information can be derived:
+- **From Address**: Derived from the ECDSA signature components (v,r,s)
+- **Transaction Hash**: Calculated from the transaction data
+- **Block Number**: Added once the transaction is mined
+- **Timestamp**: The time when the transaction was mined
 
-- **v,r,s**: The three components of an ECDSA digital signature of the originating EOA
+## Transaction Serialization
 
-The transaction message's structure is serialized using the Recursive Length Prefix (RLP) encoding scheme, which was created specifically for simple, byte-perfect data serialization in Ethereum. All numbers in Ethereum are encoded as big-endian integers, of lengths that are multiples of 8 bits.
+Transactions are serialized using the Recursive Length Prefix (RLP) encoding scheme. Key points about serialization:
+- All numbers are encoded as big-endian integers
+- Field lengths are multiples of 8 bits
+- The actual transaction does not contain field labels
+- RLP's length prefix is used to identify field boundaries
 
-Note that the field labels (to, gas limit, etc.) are shown here for clarity, but are not part of the transaction serialized data, which contains the field values RLP-encoded. In general, RLP does not contain any field delimiters or labels. RLP's length prefix is used to identify the length of each field. Anything beyond the defined length belongs to the next field in the structure.
+![Transaction Structure](../../.gitbook/assets/images/transaction.png)
 
-While this is the actual transaction structure transmitted, most internal representations and user interface visualizations embellish this with additional information, derived from the transaction or from the blockchain.
+## Important Notes
 
-For example, you may notice there is no "from" data in the address identifying the originator EOA. That is because the EOA's public key can be derived from the v,r,s components of the ECDSA signature. The address can, in turn, be derived from the public key. When you see a transaction showing a "from" field, that was added by the software used to visualize the transaction. Other metadata frequently added to the transaction by client software includes the block number (once it is mined and included in the blockchain) and a transaction ID (calculated hash). Again, this data is derived from the transaction, and does not form part of the transaction message itself.
-
+1. The transaction structure shown above represents the network-serialized format
+2. Different clients and applications may store additional metadata
+3. The "from" address is derived from the signature components
+4. Transaction IDs and block numbers are added after mining
