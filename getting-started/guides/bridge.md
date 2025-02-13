@@ -102,6 +102,7 @@ To solve these issues, we have improved the Stableswap model:
   2. Select the Source Chain - indicate the blockchain where your asset currently resides.
 
 ![](../../.gitbook/assets/images/bridge2.png)
+
 ![](../../.gitbook/assets/images/bridge3.png)
 
   3. Choose Your Asset: Decide which asset you wish to bridge to the  gatechain. A smaller subsection of more liquid assets are included here, such as stablecoins. Always verify that the token you are bridging is correct.  
