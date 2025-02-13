@@ -10,11 +10,7 @@ At the application layer, the new architecture provides standard interfaces to m
 
 
 ## Mainnet
-
-### EVM RPC
 - Chain ID: 86
 
 ## Meteora
-
-### EVM RPC
 - Chain ID: 85
