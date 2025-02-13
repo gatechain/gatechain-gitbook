@@ -49,6 +49,17 @@ Multi-signature accounts require multiple private keys to sign transactions, wit
 - Suitable for team or organization use
 - Provides higher security
 
+### 4. EVM Account
+
+EVM accounts are fully compatible with Ethereum Virtual Machine, with these features:
+
+- Standard Ethereum address format (0x prefix)
+- Compatible with Ethereum tools and wallets (MetaMask, etc.)
+- Supports ERC20, ERC721, and other Ethereum standards
+- Can interact with smart contracts
+- Seamless integration with Web3 applications
+- Enables DeFi protocol participation
+
 ## Account Address Format
 
 GateChain account addresses consist of:
