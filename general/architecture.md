@@ -8,9 +8,3 @@ At the application layer, the new architecture provides standard interfaces to m
 
 ![](../.gitbook/assets/images/chain_01.png)
 
-
-## Mainnet
-- Chain ID: 86
-
-## Meteora
-- Chain ID: 85
