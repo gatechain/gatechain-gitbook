@@ -11,7 +11,7 @@ GateChain supports the following account types:
 | Normal Account | gt | - Single private key control<br>- Immediate transactions<br>- Basic functionality | Daily transactions and transfers |
 | Vault Account | vault | - Delayed transactions<br>- Clearing period<br>- Recovery account support | Large asset storage and enhanced security |
 | Multi-signature Account | gt1m | - Multiple signature requirement<br>- Configurable threshold<br>- Shared control | Team funds and organizational assets |
-| EVM Account | 0x | - Ethereum compatible<br>- Smart contract interaction<br>- Web3 wallet support | DApp interaction and smart contract deployment |
+| EVM Account | 0x | - Ethereum compatible<br>- Smart contract interaction<br>- Web3 wallet support<br>- ERC20/721 support | DApp interaction, smart contract deployment, and DeFi participation |
 
 ### 1. Normal Account
 
@@ -61,22 +61,6 @@ Examples:
 - Normal account: gt1p0xl8jqr...
 - Vault account: vault1p0xl8jq...
 - Multi-sig account: gt1m0xl8jqr...
-
-## EVM Account
-
-EVM accounts are fully compatible with Ethereum Virtual Machine, offering the following features:
-
-- Standard Ethereum address format (0x prefix)
-- Compatible with Ethereum tools and wallets (MetaMask, etc.)
-- Supports ERC20, ERC721, and other Ethereum standards
-- Can interact with GateChain's EVM-compatible smart contracts
-- Seamless integration with Web3 applications
-
-EVM accounts enable users to:
-- Deploy and interact with smart contracts
-- Participate in DeFi protocols
-- Use existing Ethereum development tools
-- Transfer tokens between GateChain and other EVM chains
 
 ## Best Practices
 
