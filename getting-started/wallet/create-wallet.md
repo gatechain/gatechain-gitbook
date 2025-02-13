@@ -28,3 +28,29 @@ This process is abstracted away from the end-user. If you've previously used an 
 ## GateChain Web Wallet
 
 Visit [GateChain Web Wallet](https://www.gate.io/zh/web3)
+
+## GateChain CLI Wallet
+
+
+```bash
+gatecli account create
+```
+
+response:
+
+```bash
+
+- name: "1739429752"
+  type: local
+  address: gt11p2ddfwz82ezguvwhjued5y6lw4wgk89hqylcxtevkfcf45u9pdk04u2nn99cezv9e9a0zl
+  pubkey: gt1pub1u8s6p73qrernvfy4drmnwhtuc3qd5t2sfu8l2lmww6l2hjjmpc2cutqd8gxsn6l9xj
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+theme ghost symbol also quit vessel antenna token close copper plastic patch wolf payment cluster nasty elbow that theory slogan hybrid furnace anger always
+```
