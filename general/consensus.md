@@ -70,9 +70,6 @@ Account consensus participation status
 - Offline
   - Initial account status, not participating in consensus
 
-### 4. Balance
-Account balance
-
 **Note:**
 1. Each node can contain multiple accounts, each capable of sending online transactions for consensus participation. During consensus, nodes poll all local consensus accounts for self-selection.
 2. Selected consensus accounts enter the committee for proposal, validation, and voting. Committee members may receive block rewards and transaction fees. Three leaders selected with equal probability receive block rewards.

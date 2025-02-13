@@ -27,4 +27,4 @@ This process is abstracted away from the end-user. If you've previously used an 
 
 ## GateChain Web Wallet
 
-Visit [GateChain Web Wallet](https://www.gatechain.io/wallet)
+Visit [GateChain Web Wallet](https://www.gate.io/zh/web3)

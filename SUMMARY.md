@@ -58,6 +58,7 @@
 * [Developer Tools](tools/README.md)
 * [FAQ](tools/faq.md)
 * [Faucet](tools/faucet.md)
+  * [GT Faucet](https://www.gate.io/zh/web3/faucet)
 * [Popular dApps](tools/dapps.md)
 
   * [GateChain Explorer](https://gatescan.org/)
