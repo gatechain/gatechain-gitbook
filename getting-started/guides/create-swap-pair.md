@@ -1,71 +1,66 @@
-## Introduction
+# Introduction
 
-GateSwap is AMM protocol Dex, each Gateswap pair contract manage a liquidity pool of two ERC20 tokens. 
+GateSwap is an automated liquidity protocol where each GateSwap smart contract (or pair contract) manages a liquidity pool made up of reserves of two ERC20 tokens.
 
-Anyone can add liquidity to the pool to become a liquidity provider(LP), and remove all liquidity any time according to their LP token shares.
+Anyone can become a liquidity provider (LP) for a pool by depositing an equivalent value of each underlying token in exchange for pool tokens. These tokens track pro-rata LP shares of the total reserves and can be redeemed for the underlying assets at any time.
 
-## How to do
+# Usage
 
-### Add Liquidity
+## Add Liquidity
 
-1. Go to <a href="https://www.hipo.com/en/" target="_blank">Hipo website</a>, Click "Pool" module. 
+1. Visit the [Hipo website](https://www.hipo.com/zh/) and click on the "Liquidity Pool" module.
+    ![](../../.gitbook/assets/images/swap1.png)
 
-![](../../.gitbook/assets/images/swap.png)
+2. If your wallet network is not GateChain, switch your wallet network to GateChain.
+   ![](../../.gitbook/assets/images/swap2.png)
 
-2. Enter the "pool" module. If your wallet network is not GateChain, please switch your wallet network to GateChain. 
+3. Connect your wallet.
+   ![](../../.gitbook/assets/images/swap3.png)
 
-![](../../.gitbook/assets/images/swap-1.png)
+4. After successful connection, you'll see the interface.
+   ![](../../.gitbook/assets/images/swap4.png)
 
-3. On the liquidity pools page, click “Add Liquidity”. Select two token to add by selecting from a list of tokens or by directly entering the ERC20 token contract address.
+5. Enter the "GateSwap Liquidity" module.
+   ![](../../.gitbook/assets/images/swap5.png)
 
-![](../../.gitbook/assets/images/swap-2.png)
+6. On the asset amount page, click "Input USDT" and select a token from the list or input an ERC20 contract address to add liquidity.
+   For example, import the deployed contract address: `0x3fb76f1bd8144889bc69402c76f5203426335526`
+   ![](../../.gitbook/assets/images/swap6.png)
 
-4.  When you adding token for the first time, wallet approve is required.  Click “Approve” button and you will be directed to the wallet to confirm approve. 
+7. For first-time token selection, wallet authorization is required before adding liquidity. Click the "Authorize" button and confirm the authorization in your wallet.
+   ![](../../.gitbook/assets/images/swap7.png)
 
-5. After wallet approve, click “Confirm” and you will be directed to wallet to confirm. 
+8. After successful authorization, click "Confirm Add" and confirm the addition in your wallet.
 
-6. When liquidity is added successfully, you will see balance change in your wallet 
+9. After successful addition, check your wallet token balance changes. The liquidity addition is now complete!
 
-7. On the liquidity pool page,  the liquidity provide information will display under ”My Liquidity Pools“ tab. You can continue to add more liquidity by using “Add” button or remove later using “Redemption” button.
+10. In the liquidity pool page, the "My Liquidity" module shows the account's added pool information, where you can perform "Add" or "Remove" operations.
+    ![](../../.gitbook/assets/images/swap8.png)
 
-![](../../.gitbook/assets/images/swap-3.png)
+## Remove Liquidity
 
-### Remove Liquidity 
+1. After successfully adding liquidity, click "Remove" in the "My Liquidity" module.
+   ![](../../.gitbook/assets/images/swap9.png)
 
-1. Under “My Liquidity Pool”section, Click “Redemption”.
+2. For first-time liquidity removal, wallet authorization is required.
 
-![](../../.gitbook/assets/images/swap-4.png)
+3. Select the percentage you want to remove, then click the "Authorize" button and confirm the authorization in your wallet.
+   ![](../../.gitbook/assets/images/swap10.png)
 
-2. If it is the first time you remove the liquidity, wallet approve is required. 
+4. After successful authorization, click "Remove" and confirm the removal in your wallet.
+   ![](../../.gitbook/assets/images/swap11.png)
 
-3. Choose the remove shares, then click “approve”.You will be directed to wallet to confirm approve. 
+5. After successful removal, check your wallet token balance changes. The liquidity removal is now complete!
+   ![](../../.gitbook/assets/images/swap12.png)
 
-4.  After wallet approve, click “Redemption” and you will be directed to wallet to confirm.
+## Quick Swap
 
-![](../../.gitbook/assets/images/swap-5.png)
+1. Visit the Hipo website and click on the "Trade" module to enter the quick swap page. You can also perform swaps on the professional trading page.
+   ![](../../.gitbook/assets/images/swap13.png)
 
-5. When withdrawal is successfully made, you will see your wallet balance change. 
+2. Select the GateChain network on the page. The system will automatically switch your wallet network to GateChain. In the "Quick Swap" module, select the tokens you want to swap. For first-time token swaps, wallet authorization is required before proceeding with the swap operation. Click the "Authorize" button and confirm the authorization in your wallet.
 
+3. After successful authorization, click "Swap" to enter the quick swap page. Confirm the token swap information, then click "Confirm" and confirm the swap in your wallet.
+   ![](../../.gitbook/assets/images/swap14.png)
 
-### Swap
-
-1. Go to <a href="https://www.hipo.com/en/" target="_blank">Hipo website</a>, Click "Swap--Quick Swap" module. 
-
-![](../../.gitbook/assets/images/swap-6.png)
-
-2. When wallet is connected successfully, Under “Swap” Section, choose the token to swap.  If it is the first time you swap the token, wallet approve is required. Click “Approve”button and you will be directed to wallet to confirm approve.
-
-![](../../.gitbook/assets/images/swap-7.png)
-
-3. After wallet authorization, click “Swap” to access to the flash swap page. Double check the swap information and then click “Swap”, which will direct you to the wallet to confirm. 
-
-![](../../.gitbook/assets/images/swap-8.png)
-
-4. When the swap is successfully made, you will see the wallet balance change.
-
-
-
-
-
-
-
+4. After successful swap, check your wallet token balance changes. The quick swap operation is now complete!
