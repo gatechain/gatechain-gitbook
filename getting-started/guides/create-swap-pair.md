@@ -22,26 +22,31 @@ Anyone can become a liquidity provider (LP) by depositing an equivalent value of
 
 2. Switch network (if needed)
    
-   ![Switch Network](../../.gitbook/assets/images/swap2.png)
+![Switch Network](../../.gitbook/assets/images/swap2.png)
 
 3. Connect wallet
-   ![Connect Wallet](../../.gitbook/assets/images/swap3.png)
+
+![Connect Wallet](../../.gitbook/assets/images/swap3.png)
 
 4. Enter GateSwap Liquidity page
-   ![Liquidity Page](../../.gitbook/assets/images/swap5.png)
+
+![Liquidity Page](../../.gitbook/assets/images/swap5.png)
 
 5. Select tokens
    - Click "Input USDT" to select a token
    - Or input an ERC20 contract address (example: `0x3fb76f1bd8144889bc69402c76f5203426335526`)
-   ![Select Token](../../.gitbook/assets/images/swap6.png)
+
+![Select Token](../../.gitbook/assets/images/swap6.png)
 
 6. Authorization and confirmation
    - First-time users need wallet authorization
    - Click "Authorize" button and confirm in your wallet
-   ![Authorization](../../.gitbook/assets/images/swap7.png)
+   
+    ![Authorization](../../.gitbook/assets/images/swap7.png)
    - After authorization, click "Confirm Add" and confirm the addition
 
 7. Check your added liquidity in the "My Liquidity" module
+   
    ![View Liquidity](../../.gitbook/assets/images/swap8.png)
 
 ### 2. Remove Liquidity

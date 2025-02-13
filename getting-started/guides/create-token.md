@@ -14,7 +14,7 @@ Initialize the project to create a package.json file:
 ```bash
 npm init -y
 ```
-![alt text](../../.gitbook/assets/images/create_token_01.png)
+![](../../.gitbook/assets/images/create_token_01.png)
 ### 1.3 Install Hardhat
 ```bash
 npm install hardhat
@@ -111,7 +111,7 @@ Run the following command to compile the contract:
 ```bash
 npx hardhat compile
 ```
-![alt text](../../.gitbook/assets/images/create_token_02.png)
+![](../../.gitbook/assets/images/create_token_02.png)
 
 After compilation, an artifacts directory will be created: this contains the contract bytecode and metadata in .json files. You can add this directory to your .gitignore.
 
@@ -157,7 +157,7 @@ main().catch((error) => {
 ```bash
 npx hardhat run scripts/deploy.js --network Mainnet
 ```
-![alt text](../../.gitbook/assets/images/create_token_03.png)
+![](../../.gitbook/assets/images/create_token_03.png)
 
 
-![alt text](../../.gitbook/assets/images/create_token_04.png)
+![](../../.gitbook/assets/images/create_token_04.png)
