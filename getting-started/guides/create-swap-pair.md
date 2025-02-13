@@ -17,9 +17,11 @@ Anyone can become a liquidity provider (LP) by depositing an equivalent value of
 
 #### Steps to Add Liquidity
 1. Enter the "Liquidity Pool" module
-   ![Liquidity Pool Entry](../../.gitbook/assets/images/swap1.png)
+
+![Liquidity Pool Entry](../../.gitbook/assets/images/swap1.png)
 
 2. Switch network (if needed)
+   
    ![Switch Network](../../.gitbook/assets/images/swap2.png)
 
 3. Connect wallet
