@@ -25,3 +25,9 @@ This standard specifies the functions and event records that the Ethereum token 
 
 Compared to inheriting some of the basic functional interfaces of the ERC 20 standard, he mainly added tokenid. ERC20 is a standard Token interface. The Token of ERC20 can be subdivided into 10^18 infinitely, while the smallest unit of Token of ERC721 is 1, which cannot be divided.
 
+## ERC1155 Token
+
+ERC1155 is a standard for multi-token management, which is a standard for managing multiple tokens. It inherits the ERC20 standard and adds a new function: batch transfer.
+
+
+
