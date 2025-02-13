@@ -15,9 +15,9 @@ GateChain is a high-performance blockchain platform that supports:
 ## Smart Contract Development
 
 ### Supported Standards
-- ERC20 / GRC20
-- ERC721 / GRC721
-
+- ERC20 
+- ERC721 
+- ERC1155
 
 ### Development Tools
 - Truffle/Hardhat support

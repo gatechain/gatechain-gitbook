@@ -1,59 +1,94 @@
-# Transactions
+# Transactions and Block Architecture
 
-A transaction is a fundamental concept in blockchain that represents a signed data package, which triggers state changes in the blockchain. Transactions are the only way to modify the state of the blockchain and execute smart contracts.
+A transaction in GateChain represents a fundamental operation that triggers state changes in the blockchain. Understanding the transaction and block architecture is crucial for developers working with GateChain.
 
-## Overview
+## Transaction Flow
 
-Transactions in blockchain have the following characteristics:
-- They are signed messages originated from externally owned accounts (EOA)
-- They are transmitted through the network
-- They are recorded on the blockchain
-- They are the primary mechanism for state changes
-- They are required for smart contract execution
+### 1. Transaction Creation and Propagation
+- Users create and sign transactions using their private keys
+- Signed transactions are propagated to the GateChain network
+- Each transaction contains essential information such as sender, recipient, value, and data
 
-## Transaction Structure
+### 2. Transaction Pool (Mempool)
+- Unconfirmed transactions are stored in the mempool
+- Validators select transactions from the mempool based on:
+  - Gas price priority
+  - Transaction nonce
+  - Account balance validation
 
-A transaction contains the following essential components:
+### 3. Block Creation
+- Validators create new blocks by:
+  - Selecting transactions from the mempool
+  - Validating transaction signatures
+  - Executing transaction operations
+  - Updating the state
 
-### Basic Fields
+### 4. Block Validation and Consensus
+- New blocks go through consensus mechanism
+- Other validators verify:
+  - Block hash
+  - Transaction signatures
+  - State transitions
+  - Consensus rules
 
-| Field | Description |
-|-------|-------------|
-| Nonce | A sequence number issued by the originating EOA to prevent message replay |
-| Gas Price | The price of gas (in wei) the originator is willing to pay |
-| Gas Limit | The maximum amount of gas the originator is willing to buy for this transaction |
-| Recipient | The destination address |
-| Value | The amount of tokens to send to the destination |
-| Data | The variable-length binary data payload |
+### 5. Block Finalization
+- Once consensus is reached:
+  - Block is added to the chain
+  - State is updated
+  - Transactions are marked as confirmed
 
-### Signature Components
+## Block Structure
 
-The transaction includes ECDSA digital signature components:
-- v: Signature component for recovery
-- r: First 32 bytes of the signature
-- s: Second 32 bytes of the signature
+### Block Header
+- Previous block hash
+- Timestamp
+- Block height
+- State root
+- Transaction root
+- Consensus-related data
 
-### Additional Information
+### Block Body
+- List of transactions
+- Transaction receipts
+- Execution results
 
-While not part of the actual transaction data structure, the following information can be derived:
-- **From Address**: Derived from the ECDSA signature components (v,r,s)
-- **Transaction Hash**: Calculated from the transaction data
-- **Block Number**: Added once the transaction is mined
-- **Timestamp**: The time when the transaction was mined
+## Transaction Types
 
-## Transaction Serialization
+1. **Value Transfer**
+   - Standard token transfers
+   - Native token (GT) transfers
 
-Transactions are serialized using the Recursive Length Prefix (RLP) encoding scheme. Key points about serialization:
-- All numbers are encoded as big-endian integers
-- Field lengths are multiples of 8 bits
-- The actual transaction does not contain field labels
-- RLP's length prefix is used to identify field boundaries
+2. **Smart Contract Operations**
+   - Contract deployment
+   - Contract method calls
+   - State modifications
+
+3. **System Operations**
+   - Validator operations
+   - Governance proposals
+   - Parameter updates
 
 ![Transaction Structure](../../.gitbook/assets/images/transaction.png)
 
-## Important Notes
+## Transaction Lifecycle
 
-1. The transaction structure shown above represents the network-serialized format
-2. Different clients and applications may store additional metadata
-3. The "from" address is derived from the signature components
-4. Transaction IDs and block numbers are added after mining
+1. **Creation**
+   - Transaction signing
+   - Parameter setting
+   - Gas estimation
+
+2. **Validation**
+   - Signature verification
+   - Balance checks
+   - Nonce validation
+
+3. **Execution**
+   - State changes
+   - Event emission
+   - Result recording
+
+4. **Finalization**
+   - Receipt generation
+   - State commitment
+   - Block inclusion
+

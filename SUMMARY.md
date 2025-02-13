@@ -57,6 +57,7 @@
 ## Tools and Resources
 * [Developer Tools](tools/README.md)
 * [FAQ](tools/faq.md)
+* [Public Endpoints](tools/public-endpoints.md)
 * [Faucet](tools/faucet.md)
   * [GT Faucet](https://www.gate.io/zh/web3/faucet)
 * [Popular dApps](tools/dapps.md)
