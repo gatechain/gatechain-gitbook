@@ -35,9 +35,9 @@ GateBridge is designed a four-layer cross-chain structure:
 
 ### Pricing Model
 
-In a cross-chain transfer, the assets exchanged are generally same taken, so a fixed 1:1 price will fits this definition better. Assuming two assets: X and Y, sale dx of X would get dy of Y, at this time $dx = $dy. This can be described as a linear invariant arbitrary amount of asset X, the Constant Sum model:
+In a cross-chain transfer, the assets exchanged are generally same taken, so a fixed 1:1 price will fits this definition better. Assuming two assets: X and Y, sale dx of X would get dy of Y, at this time $dx = dy$. This can be described as a linear invariant arbitrary amount of asset X, the Constant Sum model:
 
-$\sum x_i=D$
+$$\sum x_i=D$$
 
 The asset price in this model can be determined as $dx_i/dx_j$; assuming $dx_i = dx_j$, the price would always be 1, which means all tokens in the pool have the same price. However, this model is unlikely to fit into an exchange market where the assets should be auto-adjustable, one asset reserve in the pair will easily to be drained and the cross-chain transfer would fail. Many well known decentralised exchanges, like Uniswap, or Balancer, are using a Constant Product model instead to allow price volatility according to market conditions. The formula is as below:
 
