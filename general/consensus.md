@@ -46,7 +46,7 @@ In each consensus round, three consensus accounts are selected from the committe
 4. All nodes collect votes for this round, persisting the block to local storage when exceeding 2/3
 5. Current block consensus ends, next round begins
 
-![](export.png)
+![](../.gitbook/assets/images/export.png)
 
 ## Consensus Account (Con-account) Properties
 

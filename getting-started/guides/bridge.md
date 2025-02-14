@@ -8,9 +8,7 @@ GateBridge provides a cross-chain protocol based on liquidity pool, which redefi
 
 GateBridge is designed a four-layer cross-chain structure:
   
-  <div align="center">
-  <a data-fancybox title="" href="@assets/img/en/gatebridge-principles1.png"><img src="@assets/img/en/gatebridge-principles1.png"  height=60% width=60%></a>
-  </div>
+![](../../.gitbook/assets/images/bridge_fc1.png)
   
    1. Network: GateBridge supports almost all smart chains in the market based on EVM, ensures fast and secure assts transfers between all supported chains. 
    2. Market Liquidity: GateBridge defines the liquidity pool in a broad sense, bringing in Cross-Chain Automated Market Maker role within the cross-chain transfer or swap. 
@@ -31,31 +29,32 @@ GateBridge is designed a four-layer cross-chain structure:
       
 ### Ledger Model
 
-1. User Tx Ledger: The ledger for user transactions, which records the user’s operation related to the liquidity pool. User ledger is implemented using smart contracts deployed on smart chains. 
+1. User Tx Ledger: The ledger for user transactions, which records the user's operation related to the liquidity pool. User ledger is implemented using smart contracts deployed on smart chains. 
 2. System Ledger: The ledger of the entire cross-chain system, which is a smart contract deployed on the GateChain mainnet, ensuring safety at a minimal maintenance cost.  
 3. Result Ledger: Tx execution result on System Ledger will be sent to every smart chains and execute, the result will be recorded in the LP Ledger, which are deployed on every smart chains.
 
 ### Pricing Model
 
 In a cross-chain transfer, the assets exchanged are generally same taken, so a fixed 1:1 price will fits this definition better. Assuming two assets: X and Y, sale dx of X would get dy of Y, at this time $dx = $dy. This can be described as a linear invariant arbitrary amount of asset X, the Constant Sum model:
-<center> $\sum x_i=D$ </center>
+
+$\sum x_i=D$
 
 The asset price in this model can be determined as $dx_i / $dx_j; assuming $dx_i = $dx_j, the price would always be 1, which means all tokens in the pool have the same price. However, this model is unlikely to fit into an exchange market where the assets should be auto-adjustable, one asset reserve in the pair will easily to be drained and the cross-chain transfer would fail. Many well known decentralised exchanges, like Uniswap, or Balancer, are using a Constant Product model instead to allow price volatility according to market conditions. The formula is as below:
-<center> $x * y=D$ </center>
+
+$x * y=D$
 
 The formula can be expanded to a liquidity pool with tokens at any allocation and amount; such as model used in Balancer:
-<center>$\prod x_i^{w_i}=D$</center>
+
+$\prod x_i^{w_i}=D$
 
 But when model is used to tokens of stable price, it will incur huge slippage. So we look into the pricing model of stableswap, or Hybrid Constant Sum and Constant Product instead,  which resembles a constant sum curve when the two tokens reach balance, and a constant product curve when the balance is broken. The slippage in this model looks like a pan, almost zero slippage at the flat bottom, and large slippage as data falling outside of the flat area. See figure below:
 
-<div align="center">
-  <a data-fancybox title="" href="@assets/img/en/gatebridge-principles2.png"><img src="@assets/img/en/gatebridge-principles2.png"  height=60% width=60%></a>
-</div>
+
+![](../../.gitbook/assets/images/bridge_fc2.png)
   
-The formula of the StableSwap model;
- <center>
- $An^n\sum x_i + D = ADn^n + \frac{D^{n+1}}{n^n\prod x_i}$
- </center>
+The formula of the StableSwap model:
+
+$An^n\sum x_i + D = ADn^n + \frac{D^{n+1}}{n^n\prod x_i}$
 
 For an asset portfolio $\{x_i\}$, we get a $D$; when the assets are exchanged in the pool, the left and right sides of the equal sign should equal to each other; this is how the StableSwap calculate the price. In this model, when there is an imbalance in asset allocation, it creates arbitrage opportunity, which will soon be taken by the arbitrageur and thus bring the balance in asset allocation back. However, this mode has its downsides too:
 
@@ -70,9 +69,8 @@ To solve these issues, we have improved the Stableswap model:
 
 ### Cross-Chain Transfer Process
 
-  <div align="center">
-  <a data-fancybox title="" href="@assets/img/en/gatebridge-principles3.png"><img src="@assets/img/en/gatebridge-principles3.png"  height=70% width=70%></a>
-  </div>
+
+![](../../.gitbook/assets/images/bridge_fc3.png)
   
 #### Add Liquidity Example：
 
