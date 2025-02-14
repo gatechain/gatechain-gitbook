@@ -29,6 +29,7 @@ In each consensus round, three consensus accounts are selected from the committe
 2. Selected accounts organize transactions from the tx pool and package them into a new block
 3. The new block and VRF proof are broadcast to all nodes
 
+
 ### 2. Soft Vote
 1. Each node receives n newly proposed blocks + proofs
 2. First verifies if the proposing node was truly selected (using VRF algorithm verification with the proposing node's pub key and proof)
@@ -36,12 +37,16 @@ In each consensus round, three consensus accounts are selected from the committe
 4. All accounts perform self-selection, selected accounts vote on the calculated block and broadcast vote information
 5. All nodes collect voting information, round ends when votes exceed 2/3, proceeding to next step
 
+
+
 ### 3. Certify Vote
 1. Each account performs self-selection
 2. Selected accounts begin validating the soft vote selected block for issues like double-spending
 3. After validation, they vote and broadcast
 4. All nodes collect votes for this round, persisting the block to local storage when exceeding 2/3
 5. Current block consensus ends, next round begins
+
+![](export.png)
 
 ## Consensus Account (Con-account) Properties
 
