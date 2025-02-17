@@ -26,7 +26,7 @@ The GT is the native token of the GateChain, serving multiple roles within the e
 ### Native
 
 ```
-1GT = 10**9 NANOGTGT = 1000000000nGT (nano-GT)
+1GT = 10**9 NANOGT = 1000000000nGT (nano-GT)
 ```
 
 ## Fungible Tokens
