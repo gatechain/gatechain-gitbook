@@ -14,7 +14,7 @@ GateChain provides comprehensive wallet solutions for users ranging from individ
 - Native Android and iOS applications
 - Secure biometric authentication
 - Push notifications for transactions
-- QR code support for payments
+
 
 
 ## References
