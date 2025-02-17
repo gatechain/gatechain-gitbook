@@ -68,7 +68,6 @@ A transaction in GateChain represents a fundamental operation that triggers stat
    - Governance proposals
    - Parameter updates
 
-![Transaction Structure](../../.gitbook/assets/images/transaction.png)
 
 ## Transaction Lifecycle
 
@@ -92,3 +91,4 @@ A transaction in GateChain represents a fundamental operation that triggers stat
    - State commitment
    - Block inclusion
 
+![Transaction Structure](../../.gitbook/assets/images/transaction.png)
