@@ -66,6 +66,3 @@ Non-fungible tokens (NFTs) represent unique digital assets. GT supports both ERC
 - **Interoperability**: Similar to fungible tokens, NFTs can interact across different standards using pointer contracts.
 - **Pointer Contract Registry**: A registry for tracking pointer contracts specific to NFTs.
 
-## IBC Tokens
-
-Inter-Blockchain Communication (IBC) is a trustless permissionless interchain messaging protocol that enables communication between many different chains. IBC tokens are tokens bridged from one chain to another using the IBC protocol. Channels are set up to establish communication between the chains. Each channel has a unique identifier and specific configurations. View the IBC Channel section of the GT chain registry for channel information.

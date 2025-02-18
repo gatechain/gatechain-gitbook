@@ -1,8 +1,8 @@
 # How to Become a GateChain Validator
 
-A validator node is responsible for participating in the network consensus and block production. By becoming a validator, you can contribute to the network's security and earn rewards through POS mining.
+A validator node is responsible for participating in the network consensus and block production. By becoming a validator, you can contribute to the network's security and earn rewards through Pos mining.
 
-To upgrade your full node to a validator node and participate in POS mining, follow these steps:
+To upgrade your full node to a validator node and participate in Pos mining, follow these steps:
 
 1. Create a regular account:
 ```bash

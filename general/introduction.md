@@ -14,7 +14,7 @@ With EVM as the smart engine for “GateChain” , we are now accessing the most
 
 ### Gatemint
 
-Based on universal POS, GateChain has made more optimizations to make it easier for users to participate in network consensus and achieve asset gain and decentralized management. Different from most POS economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus and obtain reasonable benefits while protecting the safe and stable operation of GateChain.
+Based on universal Pos, GateChain has made more optimizations to make it easier for users to participate in network consensus and achieve asset gain and decentralized management. Different from most Pos economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus and obtain reasonable benefits while protecting the safe and stable operation of GateChain.
 
 ## Getting Started
 

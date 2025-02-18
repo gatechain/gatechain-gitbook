@@ -17,7 +17,7 @@
   * [Cross-chain Bridge](getting-started/guides/bridge.md)
   * [Create a Token](getting-started/guides/create-token.md)
   * [Published to trading market](getting-started/guides/listing.md)
-    * [Create Swap Pair](getting-started/guides/create-swap-pair.md)
+    <!-- * [Create Swap Pair](getting-started/guides/create-swap-pair.md) -->
   * [Get GT](getting-started/guides/get-gt.md)
 
 ## Developers
@@ -32,7 +32,7 @@
 * [Quick Start](developers/quickstart.md)
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
   * [Frontend App](developers/quickstart/frontend.md)
-  * [EVM](developers/quickstart/evm.md)
+
 
 ## Nodes and Validators
 * [Nodes](nodes/README.md)

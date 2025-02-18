@@ -8,3 +8,31 @@ At the application layer, the new architecture provides standard interfaces to m
 
 ![](../.gitbook/assets/images/chain_01.png)
 
+## Layer Details
+
+### Application Layer
+The topmost layer containing user-facing applications:
+- **Dex**: Decentralized exchange for token swapping and trading
+- **Dapps**: Ecosystem of decentralized applications
+- **Explorer**: Blockchain explorer for querying transactions and blocks
+- **Wallet**: Digital asset wallet for managing user assets
+
+### Framework Layer
+Provides core blockchain services and functional frameworks:
+- **Asset Service**: Handles token and asset management
+- **Vault Account**: Secure storage system for digital assets
+- **Goverment**: On-chain governance system for decision making
+- **Module Manage**: Coordinates various functional modules
+
+### Execution Layer
+Responsible for smart contract and transaction execution environments:
+- **CosmosSDK**: Development toolkit based on Cosmos, providing blockchain infrastructure
+- **EVM**: Ethereum Virtual Machine for executing Ethereum-compatible smart contracts
+
+### Core Layer
+Forms the fundamental infrastructure and core functionalities:
+- **Consensus**: Ensures network nodes reach agreement
+- **Staking**: Mechanism for network security and validator selection
+- **VRF**: Verifiable Random Function for secure randomness
+- **ABCI**: Application Blockchain Interface connecting blockchain applications with consensus engine
+
