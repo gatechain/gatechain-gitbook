@@ -21,7 +21,7 @@
 
 ### GateChain Explorer
 
-- [https://explorer.gatenode.cc](https://gatescan.org/)
+- [https://gatescan.org/](https://gatescan.org/)
 
 ## Meteora
 
