@@ -21,7 +21,7 @@
 
 ### GateChain Explorer
 
-- https://explorer.gatenode.cc
+- [https://explorer.gatenode.cc](https://gatescan.org/)
 
 ## Meteora
 
@@ -36,4 +36,4 @@
 - https://meteora-api.gatenode.cc
   
 ### GateChain Explorer
-- https://gatescan.org/testnet
+- [https://gatescan.org/testnet](https://gatescan.org/testnet)
