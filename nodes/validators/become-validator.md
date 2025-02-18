@@ -16,7 +16,7 @@ gatecli con-account create [account address] --chain-id mainnet
 
 3. Send GT to the consensus account:
 ```bash
-gatecli tx send "[account address]" [GT amount] --from [sender account] --fees [fee amount] --chain-id [chain ID] -y
+gatecli tx send [account address] [GT amount] --from [sender account] --fees [fee amount] --chain-id [chain ID] -y
 ```
 
 4. Initiate the "consensus account online" transaction:

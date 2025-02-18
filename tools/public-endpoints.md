@@ -18,6 +18,11 @@
 - https://api.gatenode.cc
 - https://api-hk.gatenode.cc (Chinese HongKong)
 
+
+### GateChain Explorer
+
+- https://explorer.gatenode.cc
+
 ## Meteora
 
 ### EVM RPC
@@ -29,3 +34,6 @@
 
 ### API
 - https://meteora-api.gatenode.cc
+  
+### GateChain Explorer
+- https://gatescan.org/testnet

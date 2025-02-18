@@ -11,4 +11,4 @@ Note: Each account can only request test tokens once within 24 hours. When reque
 
 ## Mainnet
 
-Buy GT from a [Gate](https://www.gate.io/zh/buy-sell-crypto)
+Buy GT from  [Gate.io](https://www.gate.io/buy-sell-crypto)
