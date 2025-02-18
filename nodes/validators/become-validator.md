@@ -14,7 +14,12 @@ gatecli account create
 gatecli con-account create [account address] --chain-id mainnet
 ```
 
-3. Initiate the "consensus account online" transaction:
+3. Send GT to the consensus account:
+```bash
+gatecli tx send "[account address]" [GT amount] --from [sender account] --fees [fee amount] --chain-id [chain ID] -y
+```
+
+4. Initiate the "consensus account online" transaction:
 ```bash
 gatecli con-account online \
 --from [sender account] \
@@ -27,3 +32,4 @@ gatecli con-account online \
 ```
 
 After completing these steps, your node will begin participating in GateChain's consensus process. Please ensure your machine operates normally with stable network connectivity.
+

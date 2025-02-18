@@ -128,3 +128,5 @@ For EVM RPC support, modify the following properties in config.json:
 "IsWebSocketServerActive": true
 ```
 Save changes and restart gated.
+
+You can interact with your local node using either the [gatecli command line interface](../api/http.md) or the [RPC API](../api/http.md).
