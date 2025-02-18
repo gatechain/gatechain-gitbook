@@ -19,7 +19,7 @@ Before beginning, make sure you have the following setup on your computer:
 Let's start by creating our project folder.
 
 ```bash
-mkdir frontend-Ga te;
+mkdir frontend-Gatechain;
 cd frontend-Gatechain;
 ```
 
