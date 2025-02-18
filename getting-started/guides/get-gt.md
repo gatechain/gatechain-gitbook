@@ -5,7 +5,7 @@ Enter the account address where you want to receive test tokens, click "Add Requ
 
 ![GT token request](../../.gitbook/assets/images/gt_test_token.png)
 
-Note: Each account can only request test tokens once within 24 hours. When requesting test tokens through the wallet, you will receive the following prompt.
+Note: Each account can only request test tokens once. When requesting test tokens through the wallet, you will receive the following prompt.
 
 ![get GT](../../.gitbook/assets/images/get_gt.png)
 
