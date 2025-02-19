@@ -7,7 +7,7 @@
 
 ## **Consensus Nodes and Network Maintenance**
 - **Node Election Mechanism**:  
-  GateChain adopts a **Tendermint**-based consensus framework, combined with **Algorand's VRF (Verifiable Random Function) algorithm** to optimize node election process, ensuring high security and decentralization. Currently, the mainnet supports approximately 160 consensus nodes, which must stake GT tokens to participate in block generation and validation.
+  GateChain adopts a **Tendermint**-based consensus framework, combined with **Algorand's VRF (Verifiable Random Function) algorithm** to optimize node election process, ensuring high security and decentralization. The mainnet supports hundreds of consensus nodes, which must stake GT tokens to participate in block generation and validation.
 - **Node Incentive Mechanism**:  
   Consensus nodes earn rewards through block generation rewards and transaction fee sharing, while being responsible for maintaining network security. Malicious behavior will result in staked token slashing.
 

@@ -16,6 +16,11 @@ With EVM as the smart engine for “GateChain” , we are now accessing the most
 
 Based on universal PoS, GateChain has made more optimizations to make it easier for users to participate in network consensus and achieve asset gain and decentralized management. Different from most PoS economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus and obtain reasonable benefits while protecting the safe and stable operation of GateChain.
 
+### Revocable Transaction
+
+A transaction initiated from a Vault Account is a revocable transaction, allowing assets to be transfered to the “Retrieval Account” instead of the original address. After the revocable period, transaction can not be revoked.Revocable Transaction
+
+
 ## Getting Started
 
 For detailed information on building on GateChain, please refer to:

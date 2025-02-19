@@ -71,8 +71,8 @@ Since GateChain is an EVM compatible chain, existing EVM tooling like hardhat, f
 
 In this example we will be using foundry tooling.
 
-1. Install the foundry tooling by following this [Installation guide].
-2. Create a new project following the [Creating New Project Guide].
+1. Install the foundry tooling by following this [Installation guide](https://book.getfoundry.sh/getting-started/installation).
+2. Create a new project following the [Creating New Project Guide](https://book.getfoundry.sh/projects/creating-a-new-project).
 3. Make sure you have a wallet on GateChain network.
 
 Once project is created, tweak the contract code to the following, by adding a getCounter function:
