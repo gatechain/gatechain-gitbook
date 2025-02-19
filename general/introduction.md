@@ -1,4 +1,4 @@
-# Gatechain: One Chain, Infinite Possibilities
+# Gatechain: One Chain, Infinite PoSsibilities
 
 Gatechain is a high-performance public blockchain designed to meet diverse application needs, dedicated to providing efficient, secure, and cost-effective blockchain infrastructure for a broad user base and various decentralized applications. 
 GateChain is an EVM compatible Layer1 blockchain, utilizing GateMint to realize instant finality.
@@ -14,7 +14,7 @@ With EVM as the smart engine for “GateChain” , we are now accessing the most
 
 ### Gatemint
 
-Based on universal Pos, GateChain has made more optimizations to make it easier for users to participate in network consensus and achieve asset gain and decentralized management. Different from most Pos economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus and obtain reasonable benefits while protecting the safe and stable operation of GateChain.
+Based on universal PoS, GateChain has made more optimizations to make it easier for users to participate in network consensus and achieve asset gain and decentralized management. Different from most PoS economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus and obtain reasonable benefits while protecting the safe and stable operation of GateChain.
 
 ## Getting Started
 

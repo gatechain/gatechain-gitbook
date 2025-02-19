@@ -1,6 +1,6 @@
 # GateChain Consensus Mechanism
 
-Based on the general Pos mechanism, GateChain has made further optimizations to make it easier for users to participate in network consensus, achieve asset appreciation, and decentralized management. Unlike most Pos economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus while protecting GateChain's secure and stable operation and obtaining reasonable returns.
+Based on the general PoS mechanism, GateChain has made further optimizations to make it easier for users to participate in network consensus, achieve asset appreciation, and decentralized management. Unlike most PoS economic models, GateChain focuses on the inclusiveness of asset returns, allowing more users to easily participate in consensus while protecting GateChain's secure and stable operation and obtaining reasonable returns.
 
 ## Key Terms
 

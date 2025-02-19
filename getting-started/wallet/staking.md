@@ -14,7 +14,7 @@ GateChain fundamentally abandons the traditional staking approach. Any account c
 
 ## Why GateChain's Approach is Different
 
-Most Pos models require accounts to stake a certain amount of assets for consensus participation. Traditional staking models face several challenges:
+Most PoS models require accounts to stake a certain amount of assets for consensus participation. Traditional staking models face several challenges:
 
 1. **High Entry Barriers**: Consensus participation becomes a bidding target, excluding accounts with fewer assets from becoming independent validators.
 
@@ -39,7 +39,7 @@ Malicious behavior includes:
 - Consequences:
   - Reduced loyalty coefficient
   - Decreased consensus weight
-  - Possible consensus participation ban
+  - PoSsible consensus participation ban
   - Affected delegation rewards
 
 ## Participation Methods
