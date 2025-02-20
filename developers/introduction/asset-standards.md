@@ -2,12 +2,12 @@
 
 In this section, we delve into the various token standards supported on GateChain. Understanding these standards is crucial for developers as they form the foundation of many decentralized applications.
 
-GateChain offers support for four main token types:
+GateChain offers support for three main token types:
 
 - [GateChain Token (GT)](#gt)
 - [Fungible Tokens](#fungible-tokens)
 - [NFTs](#nfts)
-- [IBC Tokens](#ibc-tokens)
+
 
 ## GT
 
