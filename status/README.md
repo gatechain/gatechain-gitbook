@@ -2,6 +2,7 @@
 
 Get the latest updates from the GateChain team.
 
+---
 ## GateChain Mainnet Upgrade v1.1.6
 
 ### Overview
