@@ -3,7 +3,7 @@
 Get the latest updates from the GateChain team.
 
 ---
-## GateChain Mainnet Upgrade v1.1.6
+## GateChain Mainnet Upgrade v1.1.6 (2024-08-19)
 
 ### Overview
 
@@ -52,7 +52,7 @@ Please download and upgrade to the latest version promptly to prevent consensus 
 
 ---
 
-## GateChain Mainnet Upgrade v1.1.5
+## GateChain Mainnet Upgrade v1.1.5 (2022-12-14)
 
 ### Overview
 
@@ -91,7 +91,7 @@ Please download and upgrade to the latest version promptly to prevent consensus 
 
 ---
 
-## GateChain Mainnet Upgrade v1.1.4
+## GateChain Mainnet Upgrade v1.1.4 (2022-11-02)
 
 ### Overview
 
@@ -127,7 +127,7 @@ Please download and upgrade to the latest version promptly to prevent consensus 
 
 ---
 
-## GateChain Mainnet Upgrade v1.1.3
+## GateChain Mainnet Upgrade v1.1.3 (2022-05-13)
 
 ### Overview
 
@@ -166,7 +166,7 @@ Please download and upgrade to the latest version promptly to prevent consensus 
 
 ---
 
-## GateChain Mainnet Upgrade v1.1.0
+## GateChain Mainnet Upgrade v1.1.0 (2021-09-14)
 
 ### Overview
 
@@ -200,7 +200,7 @@ Please download and upgrade to the latest version promptly to prevent consensus 
 
 ---
 
-## GateChain Launch Announcement
+## GateChain Launches Today (2020-06-29)
 
 ### Overview
 
