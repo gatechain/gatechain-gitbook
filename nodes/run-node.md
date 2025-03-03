@@ -104,6 +104,97 @@ mkdir ~/.gated
 
 Copy configuration files to "$GATEHOME/"
 
+### Method 4: Docker Installation
+Docker provides a convenient way to run GateChain nodes in containers. The official Docker image is available at [GateChain Node Binary Repository](https://github.com/gatechain/node-binary).
+
+#### Prerequisites
+- Docker installed on your system
+- Docker Compose installed on your system
+- At least 100GB of free disk space
+
+#### Setup Steps
+
+1. Create a directory for Docker volumes:
+```bash
+mkdir -p ~/.gatechain_docker/{data,logs}
+```
+
+2. Create a `docker-compose.yml` file with the following content:
+```yaml
+version: '3'
+
+services:
+  gated:
+    image: gatechain:latest
+    container_name: gatechain-node
+    volumes:
+      - ~/.gatechain_docker/data:/root/.gated
+      - ~/.gatechain_docker/logs:/root/log
+    command: sh -c "mkdir -p /root/log && gated start > /root/log/node.log 2>&1"
+    restart: always
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+
+  evm-rest:
+    image: gatechain:latest
+    container_name: gatechain-evm-rest
+    volumes:
+      - ~/.gatechain_docker/data:/root/.gated
+      - ~/.gatechain_docker/data:/root/.gatecli
+      - ~/.gatechain_docker/logs:/root/log
+    depends_on:
+      - gated
+    command: sh -c "sleep 10 && gatecli evm rest-server --gm-websocket-port http://gatechain-node:8081 --chain-id gate-66 --laddr tcp://0.0.0.0:9545 --node http://gatechain-node:8080  --rpc-api web3,eth,personal,net,debug > /root/log/evm_rpc.log 2>&1"
+    restart: always
+    ports:
+      - "9545:9545"
+
+  rest-server:
+    image: gatechain:latest
+    container_name: gatechain-rest
+    volumes:
+      - ~/.gatechain_docker/data:/root/.gated
+      - ~/.gatechain_docker/data:/root/.gatecli
+      - ~/.gatechain_docker/logs:/root/log
+    depends_on:
+      - gated
+      - evm-rest
+    command: sh -c "gatecli rest-server --chain-id gate-66 --node http://gatechain-node:8080 --gm-websocket-port  http://gatechain-node:8081 --laddr tcp://0.0.0.0:1317 > /root/log/rest.log 2>&1"
+    restart: always
+    ports:
+      - "1317:1317"
+```
+
+3. Start the services:
+```bash
+docker-compose up -d
+```
+
+4. Check the logs:
+```bash
+# View node logs
+tail -f ~/.gatechain_docker/logs/node.log
+# View EVM RPC logs
+tail -f ~/.gatechain_docker/logs/evm_rpc.log
+# View REST server logs
+tail -f ~/.gatechain_docker/logs/rest.log
+```
+
+The setup includes three services:
+- `gated`: The main GateChain node
+- `evm-rest`: EVM RPC service for Ethereum compatibility
+- `rest-server`: REST API service for GateChain
+
+#### Exposed Ports
+- 8080: Node P2P communication
+- 8081: WebSocket port
+- 9545: EVM RPC endpoint
+- 1317: REST API endpoint
+
+#### Data Persistence
+All data is persisted in `~/.gatechain_docker/data` and logs in `~/.gatechain_docker/logs`.
+
 ## Starting the Node
 
 ### Basic Start
