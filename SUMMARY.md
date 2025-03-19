@@ -2,7 +2,7 @@
 
 * [Home](README.md)
 
-## About Introduction
+## About GateChain
 * [Introduction](general/introduction.md)
 * [Chain Architecture](general/architecture.md)
 * [Consensus](general/consensus.md)
@@ -65,7 +65,6 @@
   * [GateChain Explorer](https://gatescan.org/)
 * [Popular dApps](tools/dapps.md)
 
-  * [GateChain Explorer](https://gatescan.org/)
   * [GateWeb3 Wallet](https://www.gate.io/zh/web3)
   * [GT Mining](https://www.gate.io/zh/web3/mining/gt?tab=All)
   * [Swap](https://www.gate.io/zh/web3/swap/eth-bnb?input_chain=1&input_token=ETH&output_chain=56&output_token=BNB)
