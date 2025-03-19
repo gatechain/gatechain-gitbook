@@ -58,13 +58,9 @@
 * [Developer Tools](tools/README.md)
 * [FAQ](tools/faq.md)
 * [Public Endpoints](tools/public-endpoints.md)
-* [Faucet](tools/faucet.md)
-  * [GT Faucet](https://www.gate.io/zh/web3/faucet)
-  
-* [Gatescan](tools/gatescan.md)
-  * [GateChain Explorer](https://gatescan.org/)
+* [GT Faucet](https://www.gate.io/zh/web3/faucet)  
+* [Gatescan](https://gatescan.org/)
 * [Popular dApps](tools/dapps.md)
-
   * [GateWeb3 Wallet](https://www.gate.io/zh/web3)
   * [GT Mining](https://www.gate.io/zh/web3/mining/gt?tab=All)
   * [Swap](https://www.gate.io/zh/web3/swap/eth-bnb?input_chain=1&input_token=ETH&output_chain=56&output_token=BNB)
