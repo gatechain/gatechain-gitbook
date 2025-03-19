@@ -1,8 +1,8 @@
 # Summary
 
-* [Introduction](README.md)
+* [Home](README.md)
 
-## General Introduction
+## About Introduction
 * [Introduction](general/introduction.md)
 * [Chain Architecture](general/architecture.md)
 * [Consensus](general/consensus.md)
@@ -27,8 +27,7 @@
   * [Gas](developers/introduction/gas.md)
   * [Transactions](developers/introduction/transactions.md)
   * [Smart Contracts](developers/introduction/smart-contracts.md)
-  * [Virtual Machine (VM)](developers/introduction/vm/README.md)
-    * [EVM](developers/introduction/vm/evm.md)
+  * [EVM](developers/introduction/evm.md)
 * [Quick Start](developers/quickstart.md)
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
   * [Frontend App](developers/quickstart/frontend.md)
@@ -44,15 +43,16 @@
 * [DA Layer Introduction](da/README.md)
 * [How to Use DA](da/usage.md) -->
 
-## API & SDK
+## API 
 * [API Reference](api/README.md)
   * [HTTP API](api/http.md)
   * [EVM API](api/evm.md)
 * [Command Line Tools](api/cli.md)
-* [SDK](api/sdk/README.md)
+
+<!-- * [SDK](api/sdk/README.md)
   * [JavaScript](api/sdk/javascript.md)
   * [Python](api/sdk/python.md)
-  * [Go](api/sdk/go.md)
+  * [Go](api/sdk/go.md) -->
 
 ## Tools and Resources
 * [Developer Tools](tools/README.md)
@@ -60,6 +60,9 @@
 * [Public Endpoints](tools/public-endpoints.md)
 * [Faucet](tools/faucet.md)
   * [GT Faucet](https://www.gate.io/zh/web3/faucet)
+  
+* [Gatescan](tools/gatescan.md)
+  * [GateChain Explorer](https://gatescan.org/)
 * [Popular dApps](tools/dapps.md)
 
   * [GateChain Explorer](https://gatescan.org/)
