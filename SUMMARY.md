@@ -1,70 +1,69 @@
 # Summary
 
-* [Introduction](README.md)
+* [Home](README.md)
 
-## 通用介绍
-* [简介](general/introduction.md)
-* [链的架构](general/architecture.md)
-* [共识](general/consensus.md)
-* [治理](general/governance.md)
+## About GateChain
+* [Introduction](general/introduction.md)
+* [Chain Architecture](general/architecture.md)
+* [Consensus](general/consensus.md)
+* [Governance](general/governance.md)
 
-## Get Started
-* [钱包](getting-started/wallet.md)
-  * [创建钱包](getting-started/create-wallet.md)
-  * [账户](getting-started/accounts.md)
-* [质押](getting-started/staking.md)
-* [治理](getting-started/governance.md)
+## Getting Started
+* [Wallet](getting-started/wallet/wallet.md)
+  * [Create Wallet](getting-started/wallet/create-wallet.md)
+  * [Accounts](getting-started/wallet/accounts.md)
+  * [Staking](getting-started/wallet/staking.md)
+* [Guides](getting-started/guides.md)
+  * [Cross-chain Bridge](getting-started/guides/bridge.md)
+  * [Create a Token](getting-started/guides/create-token.md)
+  <!-- * [Published to trading market](getting-started/guides/listing.md) -->
+    <!-- * [Create Swap Pair](getting-started/guides/create-swap-pair.md) -->
+  * [Get GT](getting-started/guides/get-gt.md)
 
-## 指引 (Guides)
-* [Bridge](guides/bridge.md)
-  * [创建一个Token](guides/create-token.md)
-  * [发布到交易市场](guides/listing.md)
-  * [创建Swap交易对](guides/create-swap-pair.md)
-  * [获取GT](guides/get-gt.md)
+## Developers
+* [Introduction](developers/introduction.md)
+  * [Chain](developers/introduction/chain.md)
+  * [Asset Standards](developers/introduction/asset-standards.md)
+  * [Gas](developers/introduction/gas.md)
+  * [Transactions](developers/introduction/transactions.md)
+  * [Smart Contracts](developers/introduction/smart-contracts.md)
+  * [EVM](developers/introduction/evm.md)
+* [Quick Start](developers/quickstart.md)
+  * [Smart Contracts](developers/quickstart/smart-contracts.md)
+  * [Frontend App](developers/quickstart/frontend.md)
 
-## 开发者文档 (Developers)
-* [介绍](developers/introduction.md)
-* [快速开始](developers/quickstart.md)
-  * [智能合约](developers/quickstart/smart-contracts.md)
-  * [前端App](developers/quickstart/frontend.md)
-  * [EVM](developers/quickstart/evm.md)
-  * [SVM](developers/quickstart/svm.md)
 
-## 技术参考 (Technical Reference)
-* [链](technical/chain.md)
-  * [资产标准](technical/asset-standards.md)
-  * [Gas](technical/gas.md)
-  * [交易](technical/transactions.md)
-* [智能合约](technical/smart-contracts.md)
-* [虚拟机 (VM)](technical/vm/README.md)
-  * [EVM](technical/vm/evm.md)
-  * [SVM](technical/vm/svm.md)
-* [服务](technical/services.md)
-  * [费用代理](technical/services/fee-proxy.md)
-  * [账户系统](technical/services/accounts.md)
+## Nodes and Validators
+* [Nodes](nodes/README.md)
+  * [How to Run a Node](nodes/run-node.md)
+* [Validators](nodes/validators/README.md)
+  * [Become a Validator](nodes/validators/become-validator.md)
 
-## 节点和验证节点 (Nodes)
-* [节点](nodes/README.md)
-  * [如何启动一个节点并加入网络](nodes/run-node.md)
-* [验证节点](nodes/validators/README.md)
-  * [如何成为一个验证节点](nodes/validators/become-validator.md)
+<!-- ## DA Service (Data Availability)
+* [DA Layer Introduction](da/README.md)
+* [How to Use DA](da/usage.md) -->
 
-## DA服务 (Data Availability)
-* [DA层介绍](da/README.md)
-* [如何使用DA](da/usage.md)
-
-## API & SDK
-* [API参考](api/README.md)
+## API 
+* [API Reference](api/README.md)
   * [HTTP API](api/http.md)
-  * [WebSocket API](api/websocket.md)
-* [CLI工具](api/cli.md)
-* [SDK](api/sdk/README.md)
+  * [EVM API](api/evm.md)
+* [Command Line Tools](api/cli.md)
+
+<!-- * [SDK](api/sdk/README.md)
   * [JavaScript](api/sdk/javascript.md)
   * [Python](api/sdk/python.md)
-  * [Go](api/sdk/go.md)
+  * [Go](api/sdk/go.md) -->
 
-## 工具和资源 (Tools & Resources)
-* [开发者工具](tools/README.md)
-* [常见问题](tools/faq.md)
-* [水龙头](tools/faucet.md)
-* [常用dApps](tools/dapps.md)
+## Tools and Resources
+* [Developer Tools](tools/README.md)
+* [FAQ](tools/faq.md)
+* [Public Endpoints](tools/public-endpoints.md)
+* [GT Faucet](https://www.gate.io/zh/web3/faucet)  
+* [Gatescan](https://gatescan.org/)
+* [Popular dApps](tools/dapps.md)
+  * [GateWeb3 Wallet](https://www.gate.io/zh/web3)
+  * [GT Mining](https://www.gate.io/zh/web3/mining/gt?tab=All)
+  * [Swap](https://www.gate.io/zh/web3/swap/eth-bnb?input_chain=1&input_token=ETH&output_chain=56&output_token=BNB)
+  
+## Status Updates
+* [Update Logs](status/README.md)

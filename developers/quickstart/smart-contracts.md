@@ -1,5 +1,6 @@
 # Deploy Smart Contract to GateChain Mainnet using Hardhat
 
+This guide provides a step-by-step tutorial on how to deploy smart contracts on GateChain Mainnet using Hardhat - a popular Ethereum development environment. You'll learn how to set up a Hardhat project, configure it for GateChain, write a simple smart contract, and deploy it to the GateChain Mainnet. This tutorial is perfect for developers who are familiar with Ethereum development and want to start building on GateChain.
 ## 1. Create Hardhat Project
 
 ### 1.1 Create Project Directory
@@ -11,6 +12,8 @@ mkdir hardhat && cd hardhat
 ```bash
 npm init -y
 ```
+![console output](../../.gitbook/assets/images/init_package.png)
+
 
 ### 1.3 Install Hardhat
 ```bash
@@ -21,6 +24,7 @@ npm install hardhat
 ```bash
 npx hardhat init
 ```
+![console output](../../.gitbook/assets/images/init_hardhat.png)
 
 ### 1.5 Select Project Type
 Choose `Create an empty hardhat.config.js` option, which will create a basic Hardhat configuration file for your project.
@@ -99,6 +103,8 @@ npm install @nomicfoundation/hardhat-toolbox@^2.0.2 @nomiclabs/hardhat-web3@^2.0
 ```bash
 npx hardhat compile
 ```
+![compile result](../../.gitbook/assets/images/compile_contract.png)
+
 
 After compilation, an `artifacts` directory will be created in the project, containing the contract bytecode and metadata (.json files). It is recommended to add this directory to .gitignore.
 
@@ -156,6 +162,7 @@ main() .then(() => process.exit(0))
 ```bash
 npx hardhat run scripts/deploy.js --network Mainnet
 ```
+![deploy result](../../.gitbook/assets/images/deploy_contract.png)
 
 ## 6. Query Transactions
 
