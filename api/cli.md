@@ -2140,3 +2140,152 @@ gatecli tx encode tx_sign.json
 vAG5zc/tCmrcKqCFCihsMW8nyzNx64qObCAcke6mSXd4kqmHiPdDq6q4lEW1aDPq6/iNJOhUEihVZVapclvx5gwUyOs1WgQNIlRZij2GOBM0JtRFbTTNmIVD08kb3a7iGhAKBk5BTk9HVBIGMTAwMDAwEhIKDAoGTkFOT0dUEgIxMRDAmgwaMHZI3vYAiiIVpsyR/xtwvbu9zTfr0vxZUmT7lhu3unO0lOsHGyPZ3GqlJ9La3c5L7DIEoAboBw==
 ```
 
+
+## Vault Account
+### 1.Create a Vault Account
+**Command**
+```bash
+gatecli vault-account create [base account] [recovery account] [delay effect height] [clearing height] [token amount to transfer] --from [sender account] --fees [tx fees] --chain-id [chain ID]
+```
+
+**Parameters**
+
+| Parameter | Type | Description |
+|------|------|------|
+| base account | String | Base account address |
+| recovery account | String | Recovery account address |
+| delay effect height | Int | Delay effect height for the vault account |
+| clearing height | Int | Clearing height for the vault account |
+| token amount to transfer | String | Amount of tokens to transfer to the vault account |
+| sender account | String | Account address of the sender |
+| tx fees | String | Transaction fees |
+| chain ID | String | Chain ID of the network |
+
+**Example**
+```bash
+gatecli vault-account create gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 38 300 30NANOGT --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57a3457 --fees 10000000NANOGT --chain-id testnet
+```
+
+**Response Example**
+```
+TxHash: BASIC-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 
+//transaction hash, use gatecli tx show {hash} to query details of this transaction
+Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+Raw Log: sync broadcast tx success //transaction sent successfully
+```
+
+**Notes**
+- Must use a newly generated account as the base account to send the create vault account transaction
+- If a regular transaction has been sent to this account previously, the account becomes a regular account and cannot be used to create a vault account
+- The clearing height must be greater than (current height + delay effect height)
+
+### 2. Update Clearing Height
+
+**Command**
+```bash
+gatecli vault-account update-clearing-height [new clearing height] --from [sender account] --fees [tx fees] --chain-id [chain ID]
+```
+
+**Parameters**
+
+| Parameter | Type | Description |
+|------|------|------|
+| new clearing height | Int | New clearing height to set |
+| sender account | String | Account address of the sender |
+| tx fees | String | Transaction fees |
+| chain ID | String | Chain ID of the network |
+
+**Example**
+```bash
+gatecli vault-account update-clearing-height 100000 --from vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --fees 10000000NANOGT --chain-id testnet
+```
+
+
+**Response Example**
+```
+TxHash: ACCOUNTSET-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 
+//transaction hash, use gatecli tx show {hash} to query details of this transaction
+Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+Raw Log: sync broadcast tx success //transaction sent successfully
+```
+
+**Notes**
+- The new clearing height must be greater than the current blockchain height + vault account delay effect height
+
+
+
+### 3. Account Clearing Transaction
+
+**Command**
+```bash
+gatecli vault-account clear [vault account1]([vault account2] [vault account3]...) --from [sender account] --fees [tx fees] --chain-id [chain ID]
+```
+
+**Parameters**
+
+| Parameter | Type | Description |
+|------|------|------|
+| vault account | String | List of vault account addresses to clear |
+| sender account | String | Account address of the sender |
+| tx fees | String | Transaction fees |
+| chain ID | String | Chain ID of the network |
+
+**Example**
+```bash
+gatecli vault-account clear vault11d9t6... vault11w8c3v... vault11v5s2... --from gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 --fees 10000000NANOGT --chain-id testnet
+```
+
+**Response Example**
+```
+TxHash: VAULTCLEAR-9F685A8362E6218E372CE60E306E8BC35B66006D82F9B3381A6AECE26FA6355CA38CD75AFFDF597794159D9356BE0376 
+//transaction hash, use gatecli tx show {hash} to query details of this transaction
+Data: rQO5zc/tCu8BYPD/ggoo3TuBsrqFDCGccbnTERbiO5v48wnG3ahDuFWSzrdVLzU0iuZQw2rzDBIoHk1VTbZ0J94UnjHi3aO8fwO1V5rK5I2NZvxNF1lFstSU9JD3J18JbxqUAWd0MXB1YjE4cTJmZ3VnZ3F5Znp0YzBwNXJhenEwZnRwdXplNzJwOXRwN25lZ2plZTl6amtjaGx2MHFwNThyZTdyZGduajNqd2x3d3JscjN6Z2o3cmNkcWxnc2Z3Y2V2YWRqaGE0ZXZoOThkejdzN3pjYzh5MHZhZnY3amh1ajNobXR1M2ZtajM2eXdqZWNtbnF1OWgSEgoMCgZOQU5PR1QSAjExEMCaDBowMXrG9msevrtuVTHWuZdFIixl5hSO4tWOvIZV01T/p+Pbg1sPeBgWGHbKUcm1064KImkKJeHhoPogZ32xdJvDkmTqENs7tchCbHrQ1z1n7Eeh1/ud9weWADUSQJRr9hYE0jvDKTx9IsfYAh3myFPQaYV9pt+TEi+IKdFm2KOZGYckVEbFx9ydMn2F6UbhopD5Y5HbrKJzf0fF9woyBNcEqQY=
+Raw Log: sync broadcast tx success //transaction sent successfully
+```
+
+**Notes**
+- The sender (--from) must be the security account for this vault account
+- All vault accounts must have reached their clearing heights
+
+
+
+### 4. Query Vault Account Information
+
+**Command**
+```bash
+gatecli vault-account show [vault account] --chain-id [chain ID]
+```
+
+**Parameters**
+
+| Parameter | Type | Description |
+|------|------|------|
+| vault account | String | Vault account address |
+| chain ID | String | Chain ID of the network |
+
+**Example**
+```bash
+gatecli vault-account show vault11fg056uaatk9s3k6l34eqkc7qchjup8e39afauf9naz4jmpklsze3uwx6405vll88l5lvww --chain-id testnet
+```
+
+
+**Response Example**
+```
+Account:
+  Address:            vault1124j4d2tjt0c7vrq5er4n2ksyp539gkv28krrsye5ym2y2mf5ekvg2s7neydamthzwag272 //account address
+  Pubkey: //account public key
+  Tokens:        100000000NANOGT //account balance
+  AccountNumber: 9 //account number
+  Sequence:      0
+  AccountType:        1 //account type: 0.single-signature normal account, 1.single-signature vault account, 2.multi-signature normal account, 3.multi-signature vault account
+  DelayHeight:        100 //transaction delay effect height for vault account
+  SecurityAddress:    gt11dsck7f7txdc7hz5wdsspey0w5eyhw7yj4xrc3a6r4w4t39z9k45r86htlzxjf6z57an2r7 //recovery account for vault account
+  LastClearingHeight: 0 //last set clearing height
+  LastClearingEffectHeight:   0 //transaction height when last clearing height was set
+  NextClearingHeight:      700 //newest set clearing height
+  NextClearingEffectHeight:   257 //transaction height when newest clearing height was set
+  ReceivedRevocableTokens: //tokens that can still be revoked
+  SentRevocableTokens: //revocable tokens that have been sent
+```
+
+
