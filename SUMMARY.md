@@ -27,6 +27,7 @@
   * [Gas](developers/introduction/gas.md)
   * [Transactions](developers/introduction/transactions.md)
   * [Smart Contracts](developers/introduction/smart-contracts.md)
+  * [System Contracts](developers/introduction/contracts.md)
   * [EVM](developers/introduction/evm.md)
 * [Quick Start](developers/quickstart.md)
   * [Smart Contracts](developers/quickstart/smart-contracts.md)
