@@ -5,7 +5,7 @@ The Go SDK supports most functionalities for interacting with GateChain.
 ## Installation
 
 ```bash
-go get github.com/gatechain/gatechainsdk@v1.0.1-0.20250606063807-f88afa00dbd3
+go get github.com/gatechain/gatechainsdk@v1.0.1
 ```
 
 ## More Documentation
