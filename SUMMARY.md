@@ -50,10 +50,10 @@
   * [EVM API](api/evm.md)
 * [Command Line Tools](api/cli.md)
 
-<!-- * [SDK](api/sdk/README.md)
-  * [JavaScript](api/sdk/javascript.md)
-  * [Python](api/sdk/python.md)
-  * [Go](api/sdk/go.md) -->
+* [SDK](api/sdk/README.md)
+  <!-- * [JavaScript](api/sdk/javascript.md) -->
+  <!-- * [Python](api/sdk/python.md) -->
+  * [Go](api/sdk/go.md) 
 
 ## Tools and Resources
 * [Developer Tools](tools/README.md)
