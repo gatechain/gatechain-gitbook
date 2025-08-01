@@ -3,6 +3,54 @@
 Get the latest updates from the GateChain team.
 
 ---
+## GateChain Mainnet Upgrade  v1.1.7 (2025-08-11)
+
+### Overview
+
+1. GateChain consensus version will be upgraded to `v1.1.7`. All nodes participating in the consensus need to upgrade their node binary.
+
+2. Scheduled Upgrade Date: 2025-08-18
+
+3. For detailed information, please refer to the [GateChain Documentation](https://www.gatechain.io/docs/en/developers/gatechain-build/)
+
+### Upgrade Mechanism
+
+The GateChain consensus upgrade process works as follows:
+
+- When a consensus node uses the new binary version for block assembly, it triggers a network-wide upgrade vote
+- Once the vote count exceeds the threshold after a round of block creation, the new protocol consensus takes effect network-wide
+- At this point, any consensus nodes that haven't upgraded to the latest version will be unable to participate in consensus
+
+### Changelog
+
+1. GateChain consensus version upgrade
+   - Update blockchain version number to V17
+
+2.Adds transaction gas fee checkpoints：
+   - STD transaction gas fee must be greater than basefee
+   - Adds GasRemaining to GasMeter for querying remaining gas 
+
+3.For EVM transactions：
+   - Set  initial nounce  of the EVM account to zero
+   - Apply a flat 21000 gas for EVM transfer by default
+
+4.For block production mechanism：
+   - Introduces gasFeeThreshold mechanism to avoid staking rewards cheating using insignificant staking transactions
+
+5.RPC interface improvements：
+   - Introduces LRU cache mechanism at the API layer to provide improved access efficiency
+   - Adds new RPC interfaces
+
+6.Other fixes and improvements：
+   - Fixes indefinite node waiting issue caused by gas exhaustion
+   - Fixes concurrent map read panic 
+   - Fixes  precision issues for values returned by RPC interfaces 
+
+### Important Notice
+
+Please download and upgrade to the latest version promptly to prevent consensus account disconnection.
+
+---
 ## GateChain Mainnet Upgrade v1.1.6 (2024-08-19)
 
 ### Overview
