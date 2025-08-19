@@ -2140,6 +2140,68 @@ gatecli tx encode tx_sign.json
 vAG5zc/tCmrcKqCFCihsMW8nyzNx64qObCAcke6mSXd4kqmHiPdDq6q4lEW1aDPq6/iNJOhUEihVZVapclvx5gwUyOs1WgQNIlRZij2GOBM0JtRFbTTNmIVD08kb3a7iGhAKBk5BTk9HVBIGMTAwMDAwEhIKDAoGTkFOT0dUEgIxMRDAmgwaMHZI3vYAiiIVpsyR/xtwvbu9zTfr0vxZUmT7lhu3unO0lOsHGyPZ3GqlJ9La3c5L7DIEoAboBw==
 ```
 
+### 8. Gas Estimation
+
+**Command**
+```bash
+gatecli tx send [recipient account] [amount] --from [sender account]  --chain-id [chain ID] ----dry-run --gas-adjustment [value]
+```
+
+**Parameters**
+
+| Parameter | Type | Description |
+|------|------|------|
+| recipient account | String | Recipient account address |
+| amount | String | Transfer amount |
+| sender account | String | Sender account address |
+| chain-id | String | Chain ID |
+| gas-adjustment  | float | Estimation coefficient |
+
+**Example**
+```bash
+gatecli tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 100000NANOGT --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq  --chain-id testnet --dry-run --gas-adjustment 1.4
+```
+
+**Response Example**
+```
+gas estimate: 71349
+```
+### 9. Send Transaction with Estimated Gas
+
+**Command**
+```bash
+gatecli tx send [recipient account] [amount] --from [sender account] --fees [tx fees] --gas [gaslimit] --chain-id [chain ID]
+```
+
+**Parameters**
+
+| Parameter | Type | Description |
+|------|------|------|
+| recipient account | String | Recipient account address |
+| amount | String | Transfer amount |
+| sender account | String | Sender account address |
+| tx fees | String | Transaction fees (e.g., 100000NANOGT) |
+| gas| String | Gas limit |
+| chain-id | String | Chain ID |
+
+**Example**
+```bash
+gatecli tx send gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq 100000NANOGT --from gt11twm7dma44k7wg5jppeyphrct9nx2l4m8szy44h72qv9eatyla3hkaevg3vx99mlslwsnfq --fees 713490NANOGT --gas 71349 --chain-id testnet 
+```
+
+**Response Example**
+```
+Response:
+  TxHash: IRREVOCABLEPAY-2C8F3C621A31CC84D11FAE2F3CA3F2A9315F0BBCC6EC4D17FA76920E0957B43ECC488C51952BDB592249D64E575AB02E
+  Data: ngK5zc/tCl7cKqCFCiiJ3719mjDKkN+wByfBhTyFH31nlWIIfDLjF0nFlNa8uKExO8jRNFKBEhQ/qxhGItwZthCTSblIEUk78qRTYhoYCgZOQU5PR1QSDjEwMDAwMDAwMDAwMDAwEhYKEAoGTkFOT0dUEgY3MTM0OTAQta0EGjAAFFGQ8fF+ak+aFnmJafU2/01YaB5viwFYTYsrDuDBfau8+rUyHdtO9D4tLA/4e84iaQol4eGg+iBx0YPKICxemJ0xaakoVkgfJ8HG4FOYs1WKjCM5QPA1aBJA9I57PDH02c8vd1VpQvfiEqNkCXH5crGvPMos/zzj/SfNJTlcqJjl/Hu0Wawh65A/yUCHqo9fvZBbQDA3foGPCzIDFOYB
+  Raw Log: sync broadcast tx success
+```
+**Notes**
+- gasprice=fees/gas, gasprice must be greater than basefee, default gas value is 200000
+- Basefee can be queried through the evm rpc eth_getBlockByNumber method
+
+
+
 
 ## Vault Account
 ### 1.Create a Vault Account
